@@ -123,7 +123,34 @@ async function enviar(){
       return;
     }
 
-    respostaDiv.innerHTML = data.resposta.replace(/\n/g,"<br>");
+    const textoIA = data.resposta;
+
+const textoLimpo = textoIA.replace(/\n/g, " ");
+
+const textoCodificado = encodeURIComponent(textoLimpo);
+
+respostaDiv.innerHTML = `
+  <div id="ia-msg">${textoIA.replace(/\n/g,"<br>")}</div>
+
+  <div style="margin-top:20px;">
+    <a href="https://api.whatsapp.com/send?text=${textoCodificado}" target="_blank" class="btn-share">WhatsApp</a>
+    <button id="copiarIA" class="btn-share">Copiar</button>
+  </div>
+`;
+
+document.getElementById("copiarIA").addEventListener("click", () => {
+  const el = document.createElement("textarea");
+  el.value = textoLimpo;
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand("copy");
+  document.body.removeChild(el);
+
+  const btn = document.getElementById("copiarIA");
+  btn.innerText = "Copiado!";
+  setTimeout(() => btn.innerText = "Copiar", 2000);
+});
+
 
   }catch(e){
     respostaDiv.innerHTML = "Erro: "
