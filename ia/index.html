@@ -133,10 +133,10 @@ respostaDiv.innerHTML = `
   <div id="ia-msg">${textoIA.replace(/\n/g,"<br>")}</div>
 
   <div style="margin-top:20px;">
-    <a href="https://api.whatsapp.com/send?text=${textoCodificado}" target="_blank" class="btn-share">WhatsApp</a>
     <button id="copiarIA" class="btn-share">Copiar</button>
   </div>
 `;
+
 
 document.getElementById("copiarIA").addEventListener("click", () => {
   const el = document.createElement("textarea");
