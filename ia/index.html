@@ -19,8 +19,16 @@ body {
   background-position:center;
   color:white;
   display:flex;
+  flex-direction:column;
+}
+
+/* wrapper centralizador */
+.page{
+  flex:1;
+  display:flex;
   align-items:center;
   justify-content:center;
+  width:100%;
 }
 
 .container{
@@ -69,24 +77,37 @@ button{
   color:#fff;
 }
 
-.loading{
-  opacity:.6;
+footer{
+  text-align:center;
+  padding:20px 0;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-  <h1>Como você está se sentindo?</h1>
-  <p>Escreva livremente. Vamos gerar uma mensagem pensada especialmente para você.</p>
+<div class="page">
+  <div class="container">
 
-  <textarea id="sentimento" placeholder="Ex: Estou me sentindo perdido, cansado, magoado..."></textarea>
+    <h1>Como você está se sentindo?</h1>
+    <p>Escreva livremente. Vamos gerar uma mensagem pensada especialmente para você.</p>
 
-  <button onclick="enviar()">Receber mensagem</button>
+    <textarea id="sentimento" placeholder="Ex: Estou me sentindo perdido, cansado, magoado..."></textarea>
 
-  <div id="resposta"></div>
+    <button onclick="enviar()">Receber mensagem</button>
+
+    <div id="resposta"></div>
+
+  </div>
 </div>
+
+<footer>
+  <p>
+    <a href="../index.html" style="text-decoration:none; opacity:0.7; color:white;">
+      ← Voltar para o Mensagem.net
+    </a>
+  </p>
+</footer>
 
 <script>
 async function enviar(){
@@ -119,48 +140,39 @@ async function enviar(){
     }
 
     if(!data.resposta){
-      respostaDiv.innerHTML = "Sem resposta da IA (provável falta de créditos).";
+      respostaDiv.innerHTML = "Sem resposta da IA.";
       return;
     }
 
     const textoIA = data.resposta;
+    const textoLimpo = textoIA + "\n\nhttps://mensagem.net";
 
-const textoLimpo = textoIA + "\n\nhttps://mensagem.net";
+    respostaDiv.innerHTML = `
+      <div>${textoIA.replace(/\n/g,"<br>")}</div>
+      <div style="margin-top:20px;">
+        <button id="copiarIA">Copiar</button>
+      </div>
+    `;
 
-const textoCodificado = encodeURIComponent(textoLimpo);
+    document.getElementById("copiarIA").addEventListener("click", () => {
+      const el = document.createElement("textarea");
+      el.value = textoLimpo;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand("copy");
+      document.body.removeChild(el);
 
-respostaDiv.innerHTML = `
-  <div id="ia-msg">${textoIA.replace(/\n/g,"<br>")}</div>
-
-  <div style="margin-top:20px;">
-    <button id="copiarIA" class="btn-share">Copiar</button>
-  </div>
-`;
-
-
-document.getElementById("copiarIA").addEventListener("click", () => {
-  const el = document.createElement("textarea");
-  el.value = textoLimpo;
-  document.body.appendChild(el);
-  el.select();
-  document.execCommand("copy");
-  document.body.removeChild(el);
-
-  const btn = document.getElementById("copiarIA");
-  btn.innerText = "Copiado!";
-  setTimeout(() => btn.innerText = "Copiar", 2000);
-});
-
+      const btn = document.getElementById("copiarIA");
+      btn.innerText = "Copiado!";
+      setTimeout(() => btn.innerText = "Copiar", 2000);
+    });
 
   }catch(e){
-    respostaDiv.innerHTML = "Erro: "
-}
+    respostaDiv.innerHTML = "Erro ao gerar mensagem.";
+  }
 
 }
 </script>
 
 </body>
-<footer>
-      <p><a href="../index.html">← Voltar para o Mensagem.net</a></p>
-    </footer>
 </html>
