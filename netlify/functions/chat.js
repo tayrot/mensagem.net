@@ -1,10 +1,10 @@
-import OpenAI from "openai";
+const OpenAI = require("openai");
 
 const client = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
 
-export async function handler(event) {
+exports.handler = async function(event) {
 
   if (event.httpMethod !== "POST") {
     return {
@@ -54,10 +54,10 @@ Regras:
 - tom de esperança
 - português brasileiro
 
-Exemplo de estilo:
+Exemplo:
 
 "Aqueles que amamos nunca morrem, apenas partem antes de nós."
-
+`
         }
       ]
     });
@@ -80,4 +80,4 @@ Exemplo de estilo:
     };
 
   }
-}
+};
