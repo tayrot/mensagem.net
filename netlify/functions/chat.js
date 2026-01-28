@@ -1,7 +1,7 @@
 const OpenAI = require("openai");
 
 /**
- * Limite simples em memória (MVP)
+ * Limite simples em memória
  * 5 mensagens por IP / dia
  */
 const usage = {};
@@ -13,7 +13,6 @@ const client = new OpenAI({
 
 exports.handler = async function(event) {
 
-  // Aceita somente POST
   if (event.httpMethod !== "POST") {
     return {
       statusCode: 405,
@@ -23,7 +22,7 @@ exports.handler = async function(event) {
 
   try {
 
-    // Captura IP do usuário
+    // IP do usuário
     const ip =
       event.headers["x-forwarded-for"] ||
       event.headers["client-ip"] ||
@@ -51,7 +50,7 @@ exports.handler = async function(event) {
     if (!sentimento) {
       return {
         statusCode: 400,
-        body: JSON.stringify({ erro: "Escreva como você está se sentindo." })
+        body: JSON.stringify({ erro: "Escreva algo." })
       };
     }
 
@@ -68,82 +67,35 @@ exports.handler = async function(event) {
         {
           role: "system",
           content: `
-Você é um assistente emocional inteligente.
+Você é um gerador de FRASES CURTAS de conforto e reflexão.
 
-Analise o texto do usuário e identifique:
+Baseado neste texto do usuário:
 
-1. Se ele está expressando EMOÇÃO (positiva ou negativa)
-2. Ou se ele está apenas PEDINDO UMA MENSAGEM (sem falar de si)
-3. Ou se ele evita falar sobre si
-
-Texto do usuário:
 "${sentimento}"
 
-Agora responda seguindo APENAS UM dos formatos abaixo.
-
-────────────────────────
-
-CASO 1 — Pedido direto de mensagem OU usuário não quer falar sobre si:
+Responda SEMPRE neste formato EXATO:
 
 Linha 1:
-Aqui vai uma mensagem para você:
-
-Linha 2:
-Uma frase curta (máx 25 palavras), inspiradora, humana e profunda.
-
-────────────────────────
-
-CASO 2 — Emoção NEGATIVA:
-
-Linha 1:
-Sinto muito pelo que você está passando.
-
-Linha 2:
 Uma mensagem para você:
 
-Linha 3:
+Linha 2:
 Uma frase curta (máx 25 palavras), profunda, humana e inspiracional.
 
-────────────────────────
-
-CASO 3 — Emoção POSITIVA:
-
-Linha 1:
-Que notícia boa!
-
-Linha 2:
-Uma mensagem para você:
-
-Linha 3:
-Uma frase curta (máx 25 palavras), alegre, inspiradora e humana.
-
-────────────────────────
-
-Regras gerais:
+Regras obrigatórias:
 
 - nunca escreva carta
 - nunca use assinatura
-- nunca mencione classificação emocional
+- nunca escreva "sinto muito"
+- nunca escreva "que notícia boa"
 - linguagem simples
 - português brasileiro
-- no máximo 3 linhas
+- apenas 2 linhas
 - estilo frase de site motivacional
 
-Exemplos:
+Exemplo:
 
-Pedido direto:
-Aqui vai uma mensagem para você:
-Todo recomeço carrega dentro de si a coragem que você ainda vai descobrir.
-
-Negativo:
-Sinto muito pelo que você está passando.
 Uma mensagem para você:
-Mesmo nas noites mais longas, o coração encontra um jeito de amanhecer.
-
-Positivo:
-Que notícia boa!
-Uma mensagem para você:
-Celebre suas vitórias, porque a vida também gosta de sorrir para quem acredita.
+Mesmo quando tudo parece confuso, seu coração ainda sabe encontrar caminhos.
 `
         }
       ]
