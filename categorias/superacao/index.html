@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mensagem de Superação e Motivação: Frases de Superação de Vida — Mensagem.net</title>
+  
+  <meta name="description" content="Encontre a melhor mensagem de superação para o seu dia. Seleção exclusiva com mensagens de superação e motivação e frases de superação de vida para vencer desafios." />
+  
+  <meta name="keywords" content="mensagem de superação, mensagens de superação e motivação, frases de superação de vida, dar a volta por cima, superação pessoal" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --text-main: #ffffff;
+      --text-muted: rgba(255, 255, 255, 0.7);
+      --card-bg: rgba(255, 255, 255, 0.1);
+      --overlay: rgba(0, 0, 0, 0.35);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-main);
+      min-height: 100vh;
+      background: linear-gradient(var(--overlay), var(--overlay)), 
+                  url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
+    header { text-align: center; margin-bottom: 60px; }
+
+    h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 8vw, 3.5rem); margin-bottom: 15px; }
+    .lead { font-size: 1.2rem; color: var(--text-muted); }
+
+    .lista-frases { display: flex; flex-direction: column; gap: 30px; }
+
+    .card-frase {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 40px 30px;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    .texto-frase { font-size: 1.4rem; line-height: 1.6; font-weight: 500; margin-bottom: 15px; }
+    .autor-frase { display: block; color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; margin-bottom: 25px; }
+
+    .tag-categoria { 
+      display: inline-block; font-size: 0.7rem; background: rgba(255,255,255,0.2); 
+      padding: 4px 12px; border-radius: 50px; margin-bottom: 15px; color: #fff; text-transform: uppercase;
+    }
+
+    .share-container { display: flex; justify-content: center; gap: 12px; }
+    .btn-share {
+      padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.8rem;
+      cursor: pointer; border: 1px solid rgba(255, 255, 255, 0.2); color: white;
+      background: rgba(255, 255, 255, 0.1); transition: all 0.3s ease;
+    }
+    .btn-share:hover { background: rgba(255, 255, 255, 0.3); }
+
+    footer { text-align: center; margin-top: 60px; }
+    footer a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Superação e Vida</h1>
+      <p class="lead">Para quem decidiu vencer, o "impossível" é apenas um detalhe.</p>
+    </header>
+
+    <div style="text-align:center; color: var(--text-muted); margin-bottom: 40px; font-size: 0.95rem; line-height: 1.6;">
+      <p>Buscando uma <strong>mensagem de superação</strong>? Nossa coleção de <strong>mensagens de superação e motivação</strong> oferece as melhores <strong>frases de superação de vida</strong> para te ajudar a dar a volta por cima.</p>
+    </div>
+
+    <section id="lista-frases" class="lista-frases"></section>
+
+    <footer>
+      <p><a href="../../index.html">← Voltar para o Mensagem.net</a></p>
+    </footer>
+  </div>
+
+  <script>
+    const frasesDados = [
+      { t: "O que não te mata, te fortalece e te prepara para o que está por vir.", a: "Friedrich Nietzsche", cat: "Mensagem de Superação" },
+      { t: "A sua vida não termina quando você cai, mas quando você desiste de levantar.", a: "", cat: "Frases de Superação de Vida" },
+      { t: "Superar é acreditar que o amanhã será melhor, mesmo que o hoje esteja difícil.", a: "", cat: "Superação" },
+      { t: "A maior glória de viver não está em nunca cair, mas em nos levantar toda vez que caímos.", a: "Nelson Mandela", cat: "Superação e Motivação" },
+      { t: "Os obstáculos são aquelas coisas terríveis que você vê quando tira os olhos do seu objetivo.", a: "Henry Ford", cat: "Motivação" },
+      { t: "O sucesso é a soma de pequenos esforços repetidos dia após dia.", a: "", cat: "Mensagem de Superação" },
+      { t: "Não importa a velocidade, contanto que você não pare.", a: "Confúcio", cat: "Vida" },
+      { t: "Sua determinação deve ser sempre maior que qualquer dificuldade que surja no caminho.", a: "", cat: "Frases de Superação de Vida" },
+      { t: "A dor que você sente hoje será a força que você sentirá amanhã.", a: "", cat: "Superação" },
+      { t: "Você nunca sabe a força que tem, até que a sua única opção é ser forte.", a: "", cat: "Superação e Motivação" },
+      { t: "A vida é 10% o que acontece com você e 90% como você reage a isso.", a: "", cat: "Vida" },
+      { t: "Seja maior que suas desculpas.", a: "", cat: "Motivação" },
+      { t: "Tudo o que você sempre quis está do outro lado do medo.", a: "", cat: "Superação" },
+      { t: "O impossível é apenas uma opinião.", a: "", cat: "Motivação" },
+      { t: "Recomeçar é dar uma nova chance a si mesmo para ser feliz.", a: "", cat: "Mensagem de Superação" },
+      { t: "Transforme suas cicatrizes em sabedoria.", a: "", cat: "Frases de Superação de Vida" },
+      { t: "O segredo de progredir é começar.", a: "Mark Twain", cat: "Superação" },
+      { t: "A superação começa no momento em que você decide que não aceita mais a situação atual.", a: "", cat: "Vida" },
+      { t: "Mude o jogo. Não deixe que o jogo mude você.", a: "", cat: "Motivação" },
+      { t: "Pequenos passos todos os dias levam a grandes destinos.", a: "", cat: "Superação" },
+      { t: "Sua história não é definida pelos seus erros, mas pela sua capacidade de superá-los.", a: "", cat: "Superação e Motivação" },
+      { t: "Não olhe para trás. Você não está indo para lá.", a: "", cat: "Vida" },
+      { t: "A resiliência é a arte de florescer no meio do caos.", a: "", cat: "Superação" },
+      { t: "Cada desafio é uma oportunidade disfarçada de crescimento.", a: "", cat: "Mensagem de Superação" },
+      { t: "Você é o autor da sua própria superação.", a: "", cat: "Frases de Superação de Vida" },
+      { t: "Onde há vontade, há um caminho.", a: "", cat: "Motivação" },
+      { t: "A coragem não é a ausência de medo, é o triunfo sobre ele.", a: "Nelson Mandela", cat: "Superação" },
+      { t: "Não deixe que as sombras do passado apaguem a luz do seu futuro.", a: "", cat: "Vida" },
+      { t: "Vencer a si mesmo é a maior das vitórias.", a: "Platão", cat: "Motivação" },
+      { t: "Foque no objetivo, não nos obstáculos.", a: "", cat: "Mensagem de Superação" },
+      { t: "As tempestades não duram para sempre.", a: "", cat: "Esperança" },
+      { t: "Acredite: o melhor ainda está por vir.", a: "", cat: "Vida" },
+      { t: "A força não vem da capacidade física, mas de uma vontade indomável.", a: "Gandhi", cat: "Superação" },
+      { t: "Dificuldades preparam pessoas comuns para destinos extraordinários.", a: "C.S. Lewis", cat: "Superação e Motivação" },
+      { t: "Seja a sua melhor versão, todos os dias.", a: "", cat: "Vida" },
+      { t: "O caminho para a superação é pavimentado com persistência.", a: "", cat: "Frases de Superação de Vida" },
+      { t: "A vida bate, mas você escolhe se vai cair ou se vai lutar.", a: "", cat: "Motivação" },
+      { t: "Ninguém pode te fazer sentir inferior sem o seu consentimento.", a: "Eleanor Roosevelt", cat: "Superação" },
+      { t: "A persistência é o caminho do êxito.", a: "Charlie Chaplin", cat: "Motivação" },
+      { t: "Tudo o que você pode imaginar é real, se você tiver força para lutar.", a: "", cat: "Vida" },
+      { t: "O sucesso não é o fim, o fracasso não é fatal: é a coragem de continuar que conta.", a: "Winston Churchill", cat: "Superação" },
+      { t: "Quando faltar sorte, que sobre vontade.", a: "", cat: "Mensagem de Superação" },
+      { t: "Não pare até se orgulhar de você.", a: "", cat: "Motivação" },
+      { t: "A vida é curta demais para não tentar o seu melhor.", a: "", cat: "Vida" },
+      { t: "Supere seus limites, não os dos outros.", a: "", cat: "Superação" },
+      { t: "Toda conquista começa com a decisão de tentar.", a: "", cat: "Superação e Motivação" },
+      { t: "Você já superou 100% dos seus dias difíceis até hoje. Continue.", a: "", cat: "Frases de Superação de Vida" },
+      { t: "O deserto é apenas o caminho para a terra prometida.", a: "", cat: "Superação" },
+      { t: "Não desista de você.", a: "", cat: "Incentivo" },
+      { t: "A luz que te guia é mais forte que os olhos que te cercam.", a: "", cat: "Vida" },
+      { t: "Só se vê o brilho das estrelas no escuro.", a: "", cat: "Esperança" },
+      { t: "A disciplina é a ponte entre metas e realizações.", a: "", cat: "Motivação" },
+      { t: "Você nasceu para vencer, mas precisa decidir ser um vencedor.", a: "", cat: "Superação" },
+      { t: "A fé é o primeiro passo para a superação.", a: "", cat: "Vida" },
+      { t: "Não conte os dias, faça os dias contarem.", a: "Muhammad Ali", cat: "Superação e Motivação" },
+      { t: "A maior revanche é o seu sucesso.", a: "", cat: "Superação" },
+      { t: "Quem tem um 'porquê' enfrenta qualquer 'como'.", a: "Viktor Frankl", cat: "Motivação" },
+      { t: "A superação mora na paciência de recomeçar.", a: "", cat: "Frases de Superação de Vida" },
+      { t: "O universo conspira a favor de quem não desiste.", a: "", cat: "Vida" },
+      { t: "Hoje é um bom dia para começar a vencer.", a: "", cat: "Mensagem de Superação" }
+    ];
+
+    const container = document.getElementById('lista-frases');
+
+    frasesDados.forEach((item, index) => {
+      const div = document.createElement('div');
+      div.className = 'card-frase';
+      const textoCompleto = item.a ? `"${item.t}" — ${item.a}` : item.t;
+      const textoCodificado = encodeURIComponent(textoCompleto);
+      
+      div.innerHTML = `
+        <span class="tag-categoria">${item.cat}</span>
+        <p class="texto-frase">${item.t}</p>
+        ${item.a ? `<span class="autor-frase">${item.a}</span>` : ''}
+        <div class="share-container">
+          <a href="https://api.whatsapp.com/send?text=${textoCodificado}" target="_blank" class="btn-share">WhatsApp</a>
+          <button id="btn-${index}" class="btn-share">Copiar</button>
+        </div>
+      `;
+      container.appendChild(div);
+
+      document.getElementById(`btn-${index}`).addEventListener('click', function() {
+        const el = document.createElement('textarea');
+        el.value = textoCompleto;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+        const originalText = this.innerText;
+        this.innerText = "Copiado!";
+        setTimeout(() => { this.innerText = originalText; }, 2000);
+      });
+    });
+  </script>
+</body>
+</html>

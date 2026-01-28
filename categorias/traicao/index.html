@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frases de Traição e Decepção: Casamento, Amizade e Vida — Mensagem.net</title>
+  
+  <meta name="description" content="Encontre mensagens sobre traição no casamento, deslealdade entre amigos e reflexões sobre a dor da decepção na vida. Palavras para expressar o que você sente e superar." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --text-main: #ffffff;
+      --text-muted: rgba(255, 255, 255, 0.7);
+      --card-bg: rgba(255, 255, 255, 0.1);
+      --overlay: rgba(0, 0, 0, 0.5);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-main);
+      min-height: 100vh;
+      background: linear-gradient(var(--overlay), var(--overlay)), 
+                  url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
+
+    header { text-align: center; margin-bottom: 60px; }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 8vw, 3.5rem);
+      margin-bottom: 15px;
+    }
+
+    .lead { font-size: 1.2rem; color: var(--text-muted); }
+
+    .lista-frases { display: flex; flex-direction: column; gap: 30px; }
+
+    .card-frase {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 40px 30px;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    .texto-frase { font-size: 1.4rem; line-height: 1.6; font-style: italic; margin-bottom: 15px; }
+
+    .autor-frase {
+      display: block;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 25px;
+    }
+
+    .share-container { display: flex; justify-content: center; gap: 12px; }
+
+    .btn-share {
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.8rem;
+      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      background: rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .btn-share:hover { background: rgba(255, 255, 255, 0.3); }
+
+    footer { text-align: center; margin-top: 60px; }
+    footer a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Mensagens de Traição e Decepção</h1>
+      <p class="lead">Reflexões sobre deslealdade no casamento, amizade e os desafios da vida.</p>
+    </header>
+
+    <div style="text-align:center; color: var(--text-muted); margin-bottom: 40px; font-size: 0.95rem;">
+      <p>A decepção pode vir de onde menos esperamos. Seja uma traição no casamento ou uma quebra de confiança entre amigos, aqui você encontra palavras que traduzem sua dor e ajudam no processo de cura.</p>
+    </div>
+
+    <section id="lista-frases" class="lista-frases"></section>
+
+    <footer>
+      <p><a href="../../index.html">← Voltar para o Mensagem.net</a></p>
+    </footer>
+  </div>
+
+  <script>
+  const frasesDados = [
+      { t: "Às vezes, a traição não acaba com o amor — acaba com a inocência.", a: "" },
+      { t: "Quem trai quebra um acordo silencioso que sustentava tudo.", a: "" },
+      { t: "A dor da traição é descobrir que a confiança era unilateral.", a: "" },
+      { t: "Trair é escolher a si mesmo no momento e abandonar o nós.", a: "" },
+      { t: "Nem toda traição é sexual; muitas são emocionais.", a: "" },
+      { t: "A confiança perdida não volta no mesmo lugar.", a: "" },
+      { t: "Traição é quando a verdade chega tarde demais.", a: "" },
+      { t: "O que mais dói na traição é o que foi prometido.", a: "" },
+      { t: "Trair é ferir alguém que acreditava em você.", a: "" },
+      { t: "A mágoa da traição ensina limites.", a: "" },
+      { t: "Traição transforma lembranças em dúvidas.", a: "" },
+      { t: "Quem trai costuma subestimar as consequências.", a: "" },
+      { t: "Perdoar uma traição exige coragem — repetir, não.", a: "" },
+      { t: "A traição revela caráter sob pressão.", a: "" },
+      { t: "Às vezes, a traição começa no silêncio.", a: "" },
+      { t: "Trair é romper um pacto invisível.", a: "" },
+      { t: "A dor passa; a lição fica.", a: "" },
+      { t: "Traição não é acidente, é escolha.", a: "" },
+      { t: "A confiança é difícil de reconstruir.", a: "" },
+      { t: "Trair é quebrar a própria palavra.", a: "" },
+      { t: "A traição expõe o que estava escondido.", a: "" },
+      { t: "Quem trai perde algo que não sabia que tinha.", a: "" },
+      { t: "A ferida da traição pede verdade.", a: "" },
+      { t: "Traição é ausência de cuidado.", a: "" },
+      { t: "A confiança se constrói, a traição derruba.", a: "" },
+      { t: "Trair é desrespeitar a história.", a: "" },
+      { t: "A dor ensina a escolher melhor.", a: "" },
+      { t: "Traição muda a forma de amar.", a: "" },
+      { t: "A confiança é o chão do amor.", a: "" },
+      { t: "Traição é o oposto de compromisso.", a: "" },
+      { t: "Quando a confiança se rompe, algo profundo do vínculo se perde.", a: "Sigmund Freud" },
+      { t: "A traição fere porque atinge nossos valores mais íntimos.", a: "Friedrich Nietzsche" },
+      { t: "A traição é o único pecado que não pode ser perdoado.", a: "Dante Alighieri" },
+      { t: "Não estou triste porque você mentiu para mim, estou triste porque a partir de agora não posso mais acreditar em você.", a: "Friedrich Nietzsche" },
+      { t: "Cada traição começa com um momento de confiança.", a: "" },
+      { t: "Para haver traição, deve haver primeiro confiança.", a: "Suzanne Collins" },
+      { t: "A facada nas costas mais profunda vem de quem você mais protegeu.", a: "" },
+      { t: "A lealdade é um privilégio, não um direito.", a: "" },
+      { t: "É mais fácil perdoar um inimigo do que perdoar um amigo.", a: "William Blake" },
+      { t: "Traição nunca é apenas sobre a pessoa que foi traída; é sobre o vazio de quem traiu.", a: "" },
+      { t: "A confiança é como um espelho: você pode consertá-lo se quebrar, mas ainda verá a rachadura.", a: "" },
+      { t: "A pior traição é aquela que vem de dentro do próprio lar.", a: "" },
+      { t: "Uma mentira pode salvar seu presente, mas condena seu futuro.", a: "" },
+      { t: "Honestidade é um presente caro. Não espere isso de pessoas baratas.", a: "Warren Buffett" },
+      { t: "Quem trai uma vez, trai sempre que a conveniência for maior que a consciência.", a: "" },
+      { t: "A traição é o fim da história para quem ama e o começo do remorso para quem engana.", a: "" },
+      { t: "A decepção é a única dor que faz você acordar e ver o mundo como ele realmente é.", a: "" },
+      { t: "Nada dói mais do que ser traído pela única pessoa que você jurou que nunca te machucaria.", a: "" },
+      { t: "A traição é o refúgio dos covardes.", a: "" },
+      { t: "O amor sobrevive a muitas coisas, mas a deslealdade não é uma delas.", a: "" },
+      { t: "Não há traição sem carinho anterior.", a: "" },
+      { t: "A verdade dói apenas uma vez; a mentira dói toda vez que você lembra dela.", a: "" }
+    ];
+
+    const container = document.getElementById('lista-frases');
+
+    frasesDados.forEach((item, index) => {
+      const div = document.createElement('div');
+      div.className = 'card-frase';
+      const textoCompleto = item.a ? `"${item.t}" — ${item.a}` : item.t;
+      const textoCodificado = encodeURIComponent(textoCompleto);
+      
+      div.innerHTML = `
+        <p class="texto-frase">${item.t}</p>
+        ${item.a ? `<span class="autor-frase">${item.a}</span>` : ''}
+        <div class="share-container">
+          <a href="https://api.whatsapp.com/send?text=${textoCodificado}" target="_blank" class="btn-share">WhatsApp</a>
+          <button id="btn-${index}" class="btn-share">Copiar</button>
+        </div>
+      `;
+      container.appendChild(div);
+
+      document.getElementById(`btn-${index}`).addEventListener('click', function() {
+        const el = document.createElement('textarea');
+        el.value = textoCompleto;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+        const originalText = this.innerText;
+        this.innerText = "Copiado!";
+        setTimeout(() => { this.innerText = originalText; }, 2000);
+      });
+    });
+  </script>
+</body>
+</html>

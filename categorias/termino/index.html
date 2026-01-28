@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mensagem de Término de Namoro e Casamento: Frases e Reflexões — Mensagem.net</title>
+  
+  <meta name="description" content="Encontre a mensagem de término de namoro ou frases de término de relacionamento ideais. Reflexões sobre o fim no casamento e namoro para ajudar no seu recomeço." />
+  
+  <meta name="keywords" content="mensagem, mensagem de termino de namoro, mensagem de término, frases de término de relacionamento, fim de casamento" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --text-main: #ffffff;
+      --text-muted: rgba(255, 255, 255, 0.7);
+      --card-bg: rgba(255, 255, 255, 0.1);
+      --overlay: rgba(0, 0, 0, 0.5);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-main);
+      min-height: 100vh;
+      background: linear-gradient(var(--overlay), var(--overlay)), 
+                  url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
+    header { text-align: center; margin-bottom: 60px; }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 7vw, 3rem);
+      margin-bottom: 15px;
+    }
+
+    .lead { font-size: 1.1rem; color: var(--text-muted); line-height: 1.5; }
+    .lista-frases { display: flex; flex-direction: column; gap: 30px; }
+
+    .card-frase {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 40px 30px;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    .texto-frase { font-size: 1.3rem; line-height: 1.6; font-style: italic; margin-bottom: 15px; }
+    .autor-frase { display: block; color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 25px; }
+    
+    .tag-categoria { 
+      display: inline-block; 
+      font-size: 0.7rem; 
+      background: rgba(255,255,255,0.15); 
+      padding: 4px 10px; 
+      border-radius: 5px; 
+      margin-bottom: 15px; 
+      color: var(--text-muted);
+    }
+
+    .share-container { display: flex; justify-content: center; gap: 12px; }
+    .btn-share {
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.8rem;
+      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      background: rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .btn-share:hover { background: rgba(255, 255, 255, 0.3); }
+    footer { text-align: center; margin-top: 60px; }
+    footer a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Mensagem de Término</h1>
+      <p class="lead">Encontre a <strong>mensagem de término de namoro</strong> ou <strong>frases de término de relacionamento</strong> que traduzem o seu momento.</p>
+    </header>
+
+    <div style="text-align:center; color: var(--text-muted); margin-bottom: 40px; font-size: 0.95rem;">
+      <p>Seja para encerrar um ciclo no casamento ou buscar uma mensagem de término sincera para um namoro, aqui reunimos palavras de respeito e superação.</p>
+    </div>
+
+    <section id="lista-frases" class="lista-frases"></section>
+
+    <footer>
+      <p><a href="../../index.html">← Voltar para o Mensagem.net</a></p>
+    </footer>
+  </div>
+
+  <script>
+   const frasesDados = [
+      // NAMORO
+      { t: "Nosso namoro termina aqui, mas o respeito pelo que vivemos será eterno.", a: "", cat: "Namoro" },
+      { t: "Às vezes, o melhor jeito de amar alguém no namoro é deixando a pessoa ir.", a: "", cat: "Namoro" },
+      { t: "Não é um adeus ao que sentimos, mas um sim ao que precisamos nos tornar sozinhos.", a: "", cat: "Namoro" },
+      { t: "O fim deste namoro é o começo da minha jornada de volta para mim mesmo.", a: "", cat: "Namoro" },
+      { t: "Aprendi muito com você, mas nosso tempo como casal chegou ao fim.", a: "", cat: "Namoro" },
+      { t: "O namoro acaba quando o esforço passa a ser de uma pessoa só.", a: "", cat: "Namoro" },
+      { t: "Melhor um término doloroso agora do que um namoro sem futuro depois.", a: "", cat: "Namoro" },
+      { t: "Guardarei as memórias doces do nosso namoro, mas preciso seguir sem elas.", a: "", cat: "Namoro" },
+      { t: "Um namoro que termina é apenas uma história que precisava de um ponto final.", a: "", cat: "Namoro" },
+      { t: "A gente não perde quem não quer ficar com a gente.", a: "", cat: "Namoro" },
+      
+      // CASAMENTO
+      { t: "Um casamento que termina não é um fracasso, é um ciclo de vida que se completou.", a: "", cat: "Casamento" },
+      { t: "Desfazer os laços de um casamento dói, mas viver na indiferença dói muito mais.", a: "", cat: "Casamento" },
+      { t: "Honramos nossa história no casamento ao aceitar que agora cada um segue seu caminho.", a: "", cat: "Casamento" },
+      { t: "O divórcio é apenas o ponto final de um contrato, não do amor próprio.", a: "", cat: "Casamento" },
+      { t: "Construímos muito juntos, mas agora precisamos construir nossas vidas separadamente.", a: "", cat: "Casamento" },
+      { t: "O fim de um casamento é o começo da busca pela felicidade individual.", a: "", cat: "Casamento" },
+      { t: "Casamento é parceria; quando o respeito acaba, a estrutura desaba.", a: "", cat: "Casamento" },
+      { t: "Divórcio não é tragédia. Tragédia é criar filhos em um ambiente sem amor.", a: "", cat: "Casamento" },
+      { t: "Mudar de rumo após anos de casamento exige coragem e autocompaixão.", a: "", cat: "Casamento" },
+      { t: "O lar é onde a alma tem paz; se o casamento tirou sua paz, ele deixou de ser lar.", a: "", cat: "Casamento" },
+
+      // GERAIS E AUTORES
+      { t: "Nenhum relacionamento é perda de tempo. Se não te deu o que você queria, ensinou-te o que você precisava.", a: "", cat: "Superação" },
+      { t: "Às vezes, as coisas boas desmoronam para que coisas melhores possam surgir.", a: "Marilyn Monroe", cat: "Reflexão" },
+      { t: "O coração partido é o lugar por onde a luz entra.", a: "Rumi", cat: "Cura" },
+      { t: "Amar a si mesmo é o início de um romance para toda a vida.", a: "Oscar Wilde", cat: "Amor Próprio" },
+      { t: "O amor nunca morre de morte natural. Ele morre de cegueira e erros.", a: "Anaïs Nin", cat: "Reflexão" },
+      { t: "Dizer adeus é uma forma de abrir espaço para o que você realmente merece.", a: "", cat: "Recomeço" },
+      { t: "O término não é o fim da sua história, é apenas o fim de um capítulo.", a: "", cat: "Recomeço" },
+      { t: "A gente só perde o que nunca nos pertenceu de verdade.", a: "", cat: "Reflexão" },
+      { t: "Recomeçar dá medo, mas permanecer onde não há amor dói muito mais.", a: "", cat: "Coragem" },
+      { t: "Não force um lugar que já não te cabe mais.", a: "", cat: "Dignidade" },
+      { t: "O segredo da mudança é focar toda a sua energia não em lutar contra o velho, mas em construir o novo.", a: "Sócrates", cat: "Recomeço" },
+      { t: "Não chore porque acabou, sorria porque aconteceu.", a: "Dr. Seuss", cat: "Reflexão" },
+      { t: "O passado é um lugar de referência, não um lugar de residência.", a: "", cat: "Vida" },
+      { t: "Algumas pessoas entram na nossa vida como bênçãos, outras como lições.", a: "", cat: "Superação" },
+      { t: "A liberdade é o que você faz com o que foi feito com você.", a: "Sartre", cat: "Liberdade" },
+      { t: "Se você teve força para amar a pessoa errada, imagine quanto terá para amar a certa.", a: "", cat: "Esperança" },
+      { t: "A solitude é onde você se encontra; a solidão é onde você se perde.", a: "", cat: "Amor Próprio" },
+      { t: "O término é a poda necessária para que a árvore floresça mais forte.", a: "", cat: "Crescimento" },
+      { t: "Ninguém vale a sua saúde mental.", a: "", cat: "Prioridade" },
+      { t: "Aceitar o fim é o primeiro passo para encontrar um novo começo.", a: "", cat: "Aceitação" },
+      { t: "Onde não puderes amar, não te demores.", a: "Frida Kahlo", cat: "Dignidade" },
+      { t: "Às vezes você precisa desistir de uma pessoa para não desistir de si mesmo.", a: "", cat: "Amor Próprio" },
+      { t: "O tempo não cura tudo, mas o tempo te ensina a carregar o peso.", a: "", cat: "Cura" },
+      { t: "Ex-namorado é passado, experiência é futuro.", a: "", cat: "Namoro" },
+      { t: "Não deixe que o fim de um relacionamento apague o brilho de quem você é.", a: "", cat: "Superação" },
+      { t: "A vida é curta demais para viver tentando consertar o que já quebrou mil vezes.", a: "", cat: "Reflexão" },
+      { t: "Ser solteiro é melhor do que ser mal acompanhado e infeliz.", a: "", cat: "Dignidade" },
+      { t: "O amor-próprio é o único amor que nunca deve ter um ponto final.", a: "", cat: "Amor Próprio" },
+      { t: "Você sobreviveu a 100% dos seus dias difíceis até agora. Vai sobreviver a este também.", a: "", cat: "Força" },
+      { t: "Deixe ir. O que é seu, o vento traz. O que não é, o vento leva.", a: "", cat: "Fé" }
+    ];
+
+    const container = document.getElementById('lista-frases');
+
+    frasesDados.forEach((item, index) => {
+      const div = document.createElement('div');
+      div.className = 'card-frase';
+      const textoCompleto = item.a ? `"${item.t}" — ${item.a}` : item.t;
+      const textoCodificado = encodeURIComponent(textoCompleto);
+      
+      div.innerHTML = `
+        <span class="tag-categoria">${item.cat}</span>
+        <p class="texto-frase">${item.t}</p>
+        ${item.a ? `<span class="autor-frase">${item.a}</span>` : ''}
+        <div class="share-container">
+          <a href="https://api.whatsapp.com/send?text=${textoCodificado}" target="_blank" class="btn-share">WhatsApp</a>
+          <button id="btn-${index}" class="btn-share">Copiar</button>
+        </div>
+      `;
+      container.appendChild(div);
+
+      document.getElementById(`btn-${index}`).addEventListener('click', function() {
+        const el = document.createElement('textarea');
+        el.value = textoCompleto;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+        const originalText = this.innerText;
+        this.innerText = "Copiado!";
+        setTimeout(() => { this.innerText = originalText; }, 2000);
+      });
+    });
+  </script>
+</body>
+</html>

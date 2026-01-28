@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mensagens de Luto, Saudade e Consolo — Mensagem.net</title>
+  
+  <meta name="description" content="Encontre conforto em mensagens de luto, frases de saudade eterna e reflexões sobre a perda de entes queridos. Palavras de apoio para momentos de dor e despedida." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --text-main: #ffffff;
+      --text-muted: rgba(255, 255, 255, 0.7);
+      --card-bg: rgba(255, 255, 255, 0.1);
+      --overlay: rgba(0, 0, 0, 0.6); /* Overlay levemente mais escuro para o tema */
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-main);
+      min-height: 100vh;
+      /* Imagem de fundo fixa para consistência visual */
+      background: linear-gradient(var(--overlay), var(--overlay)), 
+                  url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
+    header { text-align: center; margin-bottom: 60px; }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 8vw, 3.5rem);
+      margin-bottom: 15px;
+    }
+
+    .lead { font-size: 1.2rem; color: var(--text-muted); }
+    .lista-frases { display: flex; flex-direction: column; gap: 30px; }
+
+    .card-frase {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 40px 30px;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    .texto-frase { font-size: 1.4rem; line-height: 1.6; font-style: italic; margin-bottom: 15px; }
+
+    .autor-frase {
+      display: block;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 25px;
+    }
+
+    .share-container { display: flex; justify-content: center; gap: 12px; }
+
+    .btn-share {
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.8rem;
+      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      background: rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .btn-share:hover { background: rgba(255, 255, 255, 0.3); }
+
+    footer { text-align: center; margin-top: 60px; }
+    footer a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Luto e Saudade</h1>
+      <p class="lead">Palavras de consolo e esperança para honrar quem partiu.</p>
+    </header>
+
+    <div style="text-align:center; color: var(--text-muted); margin-bottom: 40px; font-size: 0.95rem;">
+      <p>O luto é o amor que não tem mais para onde ir. Encontre aqui mensagens de luto para expressar sua saudade e buscar forças no conforto das palavras.</p>
+    </div>
+
+    <section id="lista-frases" class="lista-frases"></section>
+
+    <footer>
+      <p><a href="../../index.html">← Voltar para o Mensagem.net</a></p>
+    </footer>
+  </div>
+
+  <script>
+    const frasesDados = [
+      { t: "A saudade é o que faz as coisas pararem no tempo.", a: "Mário Quintana" },
+      { t: "Aqueles que amamos nunca morrem, apenas partem antes de nós.", a: "Amado Nervo" },
+      { t: "O luto não é um processo de esquecer, mas de aprender a viver com a ausência.", a: "" },
+      { t: "A morte não é o fim, é apenas uma mudança de estado na memória de quem fica.", a: "" },
+      { t: "Saudade é o amor que fica quando alguém precisa ir.", a: "" },
+      { t: "Não existem palavras que curem a dor, mas existem palavras que abraçam a alma.", a: "" },
+      { t: "A vida é eterna e o amor é imortal; a morte é apenas um horizonte.", a: "Rossiter Raymond" },
+      { t: "Guardar o que foi bom é a melhor forma de honrar quem partiu.", a: "" },
+      { t: "O céu ganhou uma estrela, e nós ficamos com a luz das lembranças.", a: "" },
+      { t: "Luto é a última prova de amor que podemos oferecer.", a: "" },
+      { t: "Dizer adeus não é esquecer, é deixar ir com gratidão pelo que foi vivido.", a: "" },
+      { t: "A dor do luto é proporcional à intensidade do amor vivido.", a: "" },
+      { t: "Embora a voz tenha silenciado, o exemplo continuará ecoando em nossos corações.", a: "" },
+      { t: "Saudade é a presença constante de quem se tornou invisível aos olhos.", a: "" },
+      { t: "Que a paz que excede todo entendimento guarde o seu coração hoje.", a: "" },
+      { t: "As lembranças são o único paraíso do qual não podemos ser expulsos.", a: "Jean Paul" },
+      { t: "A morte é uma pétala que cai para que a essência permaneça.", a: "" },
+      { t: "O tempo não cura tudo, mas nos ensina a carregar o peso do que perdemos.", a: "" },
+      { t: "Nada que é amado é verdadeiramente perdido.", a: "Toni Morrison" },
+      { t: "Onde quer que uma alma bonita tenha estado, há um rastro de belas memórias.", a: "Ronald Reagan" },
+      { t: "O adeus dói porque a alma não aceita a separação do que ama.", a: "" },
+      { t: "No jardim da memória, a gente se encontra todos os dias.", a: "" },
+      { t: "Chorar não é fraqueza, é o transbordar de um coração que amou profundamente.", a: "" },
+      { t: "A saudade é a prova de que valeu a pena cada segundo ao lado de quem se foi.", a: "" },
+      { t: "Que o tempo traga a serenidade necessária para transformar a dor em saudade mansa.", a: "" },
+      { t: "As pessoas que amamos nunca nos deixam de verdade. Elas caminham ao nosso lado todos os dias.", a: "" },
+      { t: "A morte termina uma vida, mas não um relacionamento que vive no coração.", a: "" },
+      { t: "O consolo vem da certeza de que o reencontro é uma promessa da eternidade.", a: "" },
+      { t: "Tua luz nunca se apagará, ela agora brilha através de nós.", a: "" },
+      { t: "Saudade eterna é o preço de ter tido alguém insubstituível na vida.", a: "" },
+      { t: "A vida nos ensina a dizer adeus, mas o coração nunca aprende.", a: "" },
+      { t: "Luto é atravessar um deserto sabendo que a lembrança é o oásis.", a: "" },
+      { t: "Ninguém morre enquanto houver alguém que o mantenha vivo na memória.", a: "" },
+      { t: "A partida física é inevitável, mas o amor é um vínculo indestrutível.", a: "" },
+      { t: "Fique em paz, seu legado de amor cuidará de nós por aqui.", a: "" },
+      { t: "A saudade dói, mas é ela que mantém vivo o que o tempo tentou levar.", a: "" },
+      { t: "O luto é o preço que pagamos pela coragem de amar.", a: "" },
+      { t: "Que as lembranças felizes sejam maiores do que a dor da despedida.", a: "" },
+      { t: "O amor não conhece a morte. Ele apenas muda de endereço.", a: "" },
+      { t: "Perder alguém é como perder uma parte do nosso próprio mapa do mundo.", a: "" },
+      { t: "Saudade é quando o coração insiste em procurar o que os olhos não veem mais.", a: "" },
+      { t: "O silêncio de quem partiu fala alto dentro da nossa saudade.", a: "" },
+      { t: "Descansa em paz, pois tua missão foi cumprida com amor e dignidade.", a: "" },
+      { t: "O luto nos transforma; nunca voltamos a ser os mesmos, mas podemos ser mais fortes.", a: "" },
+      { t: "A ausência física é apenas uma moldura para a presença espiritual.", a: "" },
+      { t: "Celebrar a vida de quem se foi é a melhor cura para a tristeza da partida.", a: "" },
+      { t: "A saudade é o parafuso que aperta o coração quando a distância aperta a alma.", a: "" },
+      { t: "Deus consola os que choram e fortalece os que ficaram.", a: "" },
+      { t: "Tudo o que amamos profundamente torna-se parte de nós.", a: "Helen Keller" },
+      { t: "Para sempre é muito tempo, mas é quanto eu vou guardar você comigo.", a: "" }
+    ];
+
+    const container = document.getElementById('lista-frases');
+
+    frasesDados.forEach((item, index) => {
+      const div = document.createElement('div');
+      div.className = 'card-frase';
+      const textoCompleto = item.a ? `"${item.t}" — ${item.a}` : item.t;
+      const textoCodificado = encodeURIComponent(textoCompleto);
+      
+      div.innerHTML = `
+        <p class="texto-frase">${item.t}</p>
+        ${item.a ? `<span class="autor-frase">${item.a}</span>` : ''}
+        <div class="share-container">
+          <a href="https://api.whatsapp.com/send?text=${textoCodificado}" target="_blank" class="btn-share">WhatsApp</a>
+          <button id="btn-${index}" class="btn-share">Copiar</button>
+        </div>
+      `;
+      container.appendChild(div);
+
+      document.getElementById(`btn-${index}`).addEventListener('click', function() {
+        const el = document.createElement('textarea');
+        el.value = textoCompleto;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+        const originalText = this.innerText;
+        this.innerText = "Copiado!";
+        setTimeout(() => { this.innerText = originalText; }, 2000);
+      });
+    });
+  </script>
+</body>
+</html>

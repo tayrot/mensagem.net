@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mensagem sobre Perdão e Frase de Perdão: Alcance a Paz Interior — Mensagem.net</title>
+  
+  <meta name="description" content="Encontre a mensagem sobre perdão ideal e a frase de perdão que toca o coração. Reflexões sobre reconciliação, autoperdão e a liberdade de seguir em frente." />
+  
+  <meta name="keywords" content="mensagem sobre perdão, frase de perdão, pedir desculpas, reconciliação, frases de paz, perdoar alguém" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --text-main: #ffffff;
+      --text-muted: rgba(255, 255, 255, 0.7);
+      --card-bg: rgba(255, 255, 255, 0.1);
+      --overlay: rgba(0, 0, 0, 0.45);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-main);
+      min-height: 100vh;
+      /* Imagem que remete a leveza e luz para a categoria perdão */
+      background: linear-gradient(var(--overlay), var(--overlay)), 
+                  url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
+    header { text-align: center; margin-bottom: 60px; }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 8vw, 3.5rem);
+      margin-bottom: 15px;
+    }
+
+    .lead { font-size: 1.2rem; color: var(--text-muted); }
+    .lista-frases { display: flex; flex-direction: column; gap: 30px; }
+
+    .card-frase {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 40px 30px;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    .texto-frase { font-size: 1.4rem; line-height: 1.6; font-style: italic; margin-bottom: 15px; }
+
+    .autor-frase {
+      display: block;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 25px;
+    }
+
+    .tag-categoria { 
+      display: inline-block; 
+      font-size: 0.7rem; 
+      background: rgba(255,255,255,0.1); 
+      padding: 4px 10px; 
+      border-radius: 5px; 
+      margin-bottom: 15px; 
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    .share-container { display: flex; justify-content: center; gap: 12px; }
+
+    .btn-share {
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.8rem;
+      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      background: rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .btn-share:hover { background: rgba(255, 255, 255, 0.3); }
+
+    footer { text-align: center; margin-top: 60px; }
+    footer a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>O Poder do Perdão</h1>
+      <p class="lead">Cure o seu coração e liberte sua alma.</p>
+    </header>
+
+    <div style="text-align:center; color: var(--text-muted); margin-bottom: 40px; font-size: 0.95rem; line-height: 1.6;">
+      <p>O perdão não muda o passado, mas amplia o futuro. Explore cada <strong>mensagem sobre perdão</strong> abaixo e encontre a <strong>frase de perdão</strong> que você precisa para recomeçar.</p>
+    </div>
+
+    <section id="lista-frases" class="lista-frases"></section>
+
+    <footer>
+      <p><a href="../../index.html">← Voltar para o Mensagem.net</a></p>
+    </footer>
+  </div>
+
+  <script>
+    const frasesDados = [
+      { t: "O perdão é um presente que você dá a si mesmo, para não carregar o lixo dos outros.", a: "", cat: "Mensagem sobre Perdão" },
+      { t: "Perdoar não é esquecer o que aconteceu, é lembrar sem sentir dor.", a: "", cat: "Frase de Perdão" },
+      { t: "O fraco nunca pode perdoar. O perdão é um atributo dos fortes.", a: "Mahatma Gandhi", cat: "Sabedoria" },
+      { t: "Perdoar é libertar um prisioneiro e descobrir que o prisioneiro era você.", a: "Robert Muller", cat: "Liberdade" },
+      { t: "Não deixe o sol se pôr sobre a sua ira. O perdão é a luz do amanhã.", a: "", cat: "Recomeço" },
+      { t: "Errar é humano; perdoar é divino.", a: "Alexander Pope", cat: "Clássico" },
+      { t: "O perdão é a economia do coração; ele evita o custo do ódio.", a: "", cat: "Reflexão" },
+      { t: "Se você quer ser feliz por um instante, vingue-se. Se quer ser feliz para sempre, perdoe.", a: "", cat: "Felicidade" },
+      { t: "A mágoa é um fardo pesado demais. O perdão é o que nos dá asas.", a: "", cat: "Alívio" },
+      { t: "O perdão é a chave que abre a porta da paz interior.", a: "", cat: "Paz" },
+      { t: "Ame seus inimigos, pois eles são os únicos que te dizem seus erros.", a: "Benjamin Franklin", cat: "Sabedoria" },
+      { t: "Autoperdão é aceitar que você fez o melhor que podia com a consciência que tinha na época.", a: "", cat: "Autoconhecimento" },
+      { t: "Perdoar alguém não significa que você o quer de volta na sua vida. Significa que você está em paz.", a: "", cat: "Limites" },
+      { t: "O rancor é um ácido que faz mais dano ao recipiente onde está guardado do que ao objeto onde é derramado.", a: "", cat: "Reflexão" },
+      { t: "Pedir perdão requer coragem; perdoar requer nobreza.", a: "", cat: "Caráter" },
+      { t: "Onde há amor, sempre haverá algo para perdoar.", a: "", cat: "Relacionamento" },
+      { t: "Não guarde mágoas, guarde lembranças do que te fez crescer.", a: "", cat: "Frase de Perdão" },
+      { t: "O perdão é o perfume que a violeta deixa no calcanhar que a esmagou.", a: "Mark Twain", cat: "Poesia" },
+      { t: "A vingança nos iguala ao inimigo; o perdão nos torna superiores a ele.", a: "Francis Bacon", cat: "Sabedoria" },
+      { t: "Perdoar é a forma mais alta e bela de amor.", a: "", cat: "Amor" },
+      { t: "Não espere um pedido de desculpas para encontrar a sua paz.", a: "", cat: "Autonomia" },
+      { t: "O perdão não limpa o erro do outro, mas limpa o seu olhar sobre a vida.", a: "", cat: "Cura" },
+      { t: "Um coração perdoador é um jardim que sempre floresce.", a: "", cat: "Mensagem sobre Perdão" },
+      { t: "Nada é tão difícil que o perdão não possa suavizar.", a: "", cat: "Esperança" },
+      { t: "O perdão é o óleo que lubrifica as engrenagens da convivência humana.", a: "", cat: "Vida Social" },
+      { t: "Perdoe-se pelas escolhas que você fez enquanto tentava sobreviver.", a: "", cat: "Autocompaixão" },
+      { t: "A maior vitória sobre uma ofensa é o perdão.", a: "", cat: "Vitória" },
+      { t: "Quem perdoa dorme em paz; quem odeia vive em guerra.", a: "", cat: "Paz Interior" },
+      { t: "A vida é muito curta para gastá-la alimentando ressentimentos.", a: "", cat: "Vida" },
+      { t: "O perdão é a ponte para um futuro melhor.", a: "", cat: "Futuro" },
+      { t: "Perdoar é dar uma nova chance para a sua própria felicidade.", a: "", cat: "Felicidade" },
+      { t: "A raiva é uma tempestade; o perdão é o arco-íris.", a: "", cat: "Metafora" },
+      { t: "O perdão é a coragem de dizer: 'Eu não vou mais deixar o passado me ferir'.", a: "", cat: "Frase de Perdão" },
+      { t: "Sejamos os primeiros a perdoar, pois somos os primeiros a precisar de perdão.", a: "", cat: "Humanidade" },
+      { t: "O perdão reconstrói o que a raiva destruiu.", a: "", cat: "Reconstrução" },
+      { t: "Mude sua história através do perdão.", a: "", cat: "Mudança" },
+      { t: "A cura começa no momento em que você decide soltar a mágoa.", a: "", cat: "Cura" },
+      { t: "O perdão é o passaporte para a liberdade emocional.", a: "", cat: "Liberdade" },
+      { t: "Não permita que o erro de alguém defina a sua paz de espírito.", a: "", cat: "Equilíbrio" },
+      { t: "Perdoar é reconhecer que todos somos aprendizes nesta vida.", a: "", cat: "Aprendizado" },
+      { t: "O perdão remove as pedras do caminho para que você possa correr de novo.", a: "", cat: "Ação" },
+      { t: "O silêncio do perdão é mais forte que o grito da mágoa.", a: "", cat: "Silêncio" },
+      { t: "Se o perdão fosse fácil, não seria uma virtude.", a: "", cat: "Virtude" },
+      { t: "Perdoar é a arte de desatar nós sem quebrar os fios.", a: "", cat: "Arte" },
+      { t: "A cada perdão concedido, uma corrente é quebrada.", a: "", cat: "Libertação" },
+      { t: "Deixe o perdão ser a sua marca no mundo.", a: "", cat: "Legado" },
+      { t: "Perdoar não significa concordar com o erro, mas se recusar a ser escravo dele.", a: "", cat: "Mensagem sobre Perdão" },
+      { t: "A alma que perdoa brilha mais forte.", a: "", cat: "Luz" },
+      { t: "O perdão é o ponto final na dor e o parágrafo no recomeço.", a: "", cat: "Escrita" },
+      { t: "No fim, o que importa é a paz que o perdão trouxe para o seu coração.", a: "", cat: "Conclusão" }
+    ];
+
+    const container = document.getElementById('lista-frases');
+
+    frasesDados.forEach((item, index) => {
+      const div = document.createElement('div');
+      div.className = 'card-frase';
+      const textoCompleto = item.a ? `"${item.t}" — ${item.a}` : item.t;
+      const textoCodificado = encodeURIComponent(textoCompleto);
+      
+      div.innerHTML = `
+        <span class="tag-categoria">${item.cat}</span>
+        <p class="texto-frase">${item.t}</p>
+        ${item.a ? `<span class="autor-frase">${item.a}</span>` : ''}
+        <div class="share-container">
+          <a href="https://api.whatsapp.com/send?text=${textoCodificado}" target="_blank" class="btn-share">WhatsApp</a>
+          <button id="btn-${index}" class="btn-share">Copiar</button>
+        </div>
+      `;
+      container.appendChild(div);
+
+      document.getElementById(`btn-${index}`).addEventListener('click', function() {
+        const el = document.createElement('textarea');
+        el.value = textoCompleto;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+        const originalText = this.innerText;
+        this.innerText = "Copiado!";
+        setTimeout(() => { this.innerText = originalText; }, 2000);
+      });
+    });
+  </script>
+</body>
+</html>

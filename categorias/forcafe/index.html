@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Força e Fé: Mensagens para Momentos Difíceis — Mensagem.net</title>
+  
+  <meta name="description" content="Encontre a mensagem para momentos difíceis que você precisa. Frases de força e superação, palavras de incentivo e fé para atravessar qualquer desafio." />
+  
+  <meta name="keywords" content="mensagem para momentos difíceis, frases de força e superação, palavras de incentivo, fé em deus, superação pessoal, motivação" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --text-main: #ffffff;
+      --text-muted: rgba(255, 255, 255, 0.7);
+      --card-bg: rgba(255, 255, 255, 0.1);
+      --overlay: rgba(0, 0, 0, 0.4); /* Overlay mais claro para passar sensação de esperança */
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-main);
+      min-height: 100vh;
+      background: linear-gradient(var(--overlay), var(--overlay)), 
+                  url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
+    header { text-align: center; margin-bottom: 60px; }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 8vw, 3.5rem);
+      margin-bottom: 15px;
+    }
+
+    .lead { font-size: 1.2rem; color: var(--text-muted); }
+    .lista-frases { display: flex; flex-direction: column; gap: 30px; }
+
+    .card-frase {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 40px 30px;
+      border-radius: 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .texto-frase { font-size: 1.4rem; line-height: 1.6; font-weight: 500; margin-bottom: 15px; }
+
+    .autor-frase {
+      display: block;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 25px;
+    }
+
+    .tag-categoria { 
+      display: inline-block; 
+      font-size: 0.7rem; 
+      background: rgba(255,255,255,0.2); 
+      padding: 4px 12px; 
+      border-radius: 50px; 
+      margin-bottom: 15px; 
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    .share-container { display: flex; justify-content: center; gap: 12px; }
+
+    .btn-share {
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.8rem;
+      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      background: rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .btn-share:hover { background: rgba(255, 255, 255, 0.3); transform: translateY(-2px); }
+
+    footer { text-align: center; margin-top: 60px; }
+    footer a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Força e Fé</h1>
+      <p class="lead">Para dias difíceis, coragem. Para todos os dias, fé.</p>
+    </header>
+
+    <div style="text-align:center; color: var(--text-muted); margin-bottom: 40px; font-size: 0.95rem; line-height: 1.6;">
+      <p>Encontre aqui a <strong>mensagem para momentos difíceis</strong> que renovará seu espírito. Use estas <strong>frases de força e superação</strong> como <strong>palavras de incentivo</strong> para o seu dia.</p>
+    </div>
+
+    <section id="lista-frases" class="lista-frases"></section>
+
+    <footer>
+      <p><a href="../../index.html">← Voltar para o Mensagem.net</a></p>
+    </footer>
+  </div>
+
+  <script>
+    const frasesDados = [
+      { t: "Às vezes, Deus não muda a situação, porque Ele está usando a situação para mudar você.", a: "", cat: "Fé" },
+      { t: "Os dias difíceis são os que mais te fazem crescer.", a: "", cat: "Superação" },
+      { t: "A fé não torna as coisas fáceis, ela as torna possíveis.", a: "", cat: "Palavras de Incentivo" },
+      { t: "Você é muito mais forte do que imagina e muito mais capaz do que acredita.", a: "", cat: "Força" },
+      { t: "Grandes batalhas só são dadas a grandes guerreiros.", a: "", cat: "Mensagem para Momentos Difíceis" },
+      { t: "Não foque no tamanho do problema, foque na grandeza de quem te sustenta.", a: "", cat: "Fé" },
+      { t: "Respire fundo. É apenas um dia ruim, não uma vida ruim.", a: "", cat: "Incentivo" },
+      { t: "A sua força não vem da vitória, mas das lutas que você não desistiu.", a: "", cat: "Superação" },
+      { t: "A fé é o firme fundamento das coisas que se esperam e a prova das coisas que não se veem.", a: "Hebreus 11:1", cat: "Fé" },
+      { t: "Quando você chegar ao fim da corda, dê um nó e aguente firme.", a: "Franklin D. Roosevelt", cat: "Coragem" },
+      { t: "O choro pode durar uma noite, mas a alegria vem pela manhã.", a: "Salmos 30:5", cat: "Esperança" },
+      { t: "Para cada fim, um novo recomeço. Para cada dúvida, fé.", a: "", cat: "Recomeço" },
+      { t: "Se o caminho está difícil, é porque você está no caminho certo.", a: "", cat: "Incentivo" },
+      { t: "Deus nunca disse que a jornada seria fácil, mas disse que a chegada valeria a pena.", a: "", cat: "Fé" },
+      { t: "Tudo o que você está passando hoje está te preparando para o que você pediu ontem.", a: "", cat: "Preparação" },
+      { t: "Coragem não é a ausência de medo, mas a decisão de que algo é mais importante que o medo.", a: "", cat: "Coragem" },
+      { t: "Acalma o coração. O que é seu encontrará um jeito de chegar até você.", a: "", cat: "Paz" },
+      { t: "Mantenha o foco no horizonte e a fé no coração.", a: "", cat: "Fé" },
+      { t: "Nenhum mar calmo fez um marinheiro mestre.", a: "", cat: "Superação" },
+      { t: "O que não te mata, te fortalece.", a: "Friedrich Nietzsche", cat: "Força" },
+      { t: "Fé é dar o primeiro passo mesmo quando você não vê toda a escada.", a: "Martin Luther King", cat: "Fé" },
+      { t: "Acredite: você ainda vai rir de problemas que hoje te fazem chorar.", a: "", cat: "Incentivo" },
+      { t: "Não pare até se orgulhar de você.", a: "", cat: "Superação" },
+      { t: "Fé não é acreditar que Deus vai fazer o que você quer. Fé é acreditar que Ele fará o que é melhor.", a: "", cat: "Fé" },
+      { t: "Não conte os dias, faça os dias contarem.", a: "Muhammad Ali", cat: "Incentivo" },
+      { t: "Sua história ainda não acabou. Isso é só um capítulo difícil.", a: "", cat: "Esperança" },
+      { t: "Se você pode sonhar, você pode fazer.", a: "Walt Disney", cat: "Força" },
+      { t: "A paciência é a força do alma.", a: "", cat: "Paciência" },
+      { t: "Coloque Deus no início e Ele cuidará do fim.", a: "", cat: "Fé" },
+      { t: "Não olhe para trás, você não está indo para lá.", a: "", cat: "Recomeço" },
+      { t: "Onde há fé, há milagres.", a: "", cat: "Milagres" },
+      { t: "Sempre que sentir vontade de desistir, lembre-se por que começou.", a: "", cat: "Persistência" },
+      { t: "Seja a sua própria luz nos dias mais escuros.", a: "", cat: "Força" },
+      { t: "O sucesso é ir de fracasso em fracasso sem perder o entusiasmo.", a: "Winston Churchill", cat: "Superação" },
+      { t: "A fé remove montanhas, mas a força de vontade te faz escalá-las.", a: "", cat: "Equilíbrio" },
+      { t: "Para quem tem fé, a palavra impossível é apenas uma opinião.", a: "", cat: "Fé" },
+      { t: "A vida bate forte, mas o que importa é o quanto você consegue apanhar e continuar seguindo em frente.", a: "Rocky Balboa", cat: "Resiliência" },
+      { t: "O universo não te dá o que você quer, ele te dá o que você precisa para evoluir.", a: "", cat: "Evolução" },
+      { t: "Confie no processo. O tempo de Deus é perfeito.", a: "", cat: "Fé" },
+      { t: "Você já superou coisas que achou que nunca superaria. Isso também vai passar.", a: "", cat: "Superação" },
+      { t: "Mesmo que ninguém veja, continue sendo bom. O universo tem boa memória.", a: "", cat: "Ética" },
+      { t: "A força não vem da capacidade física, vem de uma vontade indomável.", a: "Mahatma Gandhi", cat: "Força" },
+      { t: "Pedir ajuda não é sinal de fraqueza, é sinal de inteligência.", a: "", cat: "Incentivo" },
+      { t: "Não deixe o barulho do mundo abafar a voz da sua intuição.", a: "", cat: "Paz" },
+      { t: "A esperança é a última que morre e a primeira que renasce.", a: "", cat: "Esperança" },
+      { t: "Não tenha medo de recomeçar do zero. Agora você não está começando do nada, está começando da experiência.", a: "", cat: "Recomeço" },
+      { t: "O impossível é apenas algo que ainda não foi feito.", a: "", cat: "Incentivo" },
+      { t: "Ter fé é assinar uma folha em branco e deixar que Deus escreva o que quiser.", a: "Santo Agostinho", cat: "Fé" },
+      { t: "A gratidão é o combustível da superação.", a: "", cat: "Gratidão" },
+      { t: "Aguenta firme. O que hoje é dor, amanhã será força.", a: "", cat: "Palavras de Incentivo" }
+    ];
+
+    const container = document.getElementById('lista-frases');
+
+    frasesDados.forEach((item, index) => {
+      const div = document.createElement('div');
+      div.className = 'card-frase';
+      const textoCompleto = item.a ? `"${item.t}" — ${item.a}` : item.t;
+      const textoCodificado = encodeURIComponent(textoCompleto);
+      
+      div.innerHTML = `
+        <span class="tag-categoria">${item.cat}</span>
+        <p class="texto-frase">${item.t}</p>
+        ${item.a ? `<span class="autor-frase">${item.a}</span>` : ''}
+        <div class="share-container">
+          <a href="https://api.whatsapp.com/send?text=${textoCodificado}" target="_blank" class="btn-share">WhatsApp</a>
+          <button id="btn-${index}" class="btn-share">Copiar</button>
+        </div>
+      `;
+      container.appendChild(div);
+
+      document.getElementById(`btn-${index}`).addEventListener('click', function() {
+        const el = document.createElement('textarea');
+        el.value = textoCompleto;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+        const originalText = this.innerText;
+        this.innerText = "Copiado!";
+        setTimeout(() => { this.innerText = originalText; }, 2000);
+      });
+    });
+  </script>
+</body>
+</html>

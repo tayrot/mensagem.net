@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reflexão sobre Decepção e Mágoa: Frases de Clarice Lispector — Mensagem.net</title>
+  
+  <meta name="description" content="Encontre a melhor reflexão sobre decepção e frases de mágoa. Inclui pensamentos de Clarice Lispector sobre decepção para ajudar você a traduzir sua dor." />
+  
+  <meta name="keywords" content="frase decepção, clarice lispector decepção, reflexão sobre decepção, mensagens de mágoa, decepção com amigos, dor no peito" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --text-main: #ffffff;
+      --text-muted: rgba(255, 255, 255, 0.7);
+      --card-bg: rgba(255, 255, 255, 0.1);
+      --overlay: rgba(0, 0, 0, 0.55);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-main);
+      min-height: 100vh;
+      background: linear-gradient(var(--overlay), var(--overlay)), 
+                  url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+      background-size: cover; background-position: center; background-attachment: fixed;
+    }
+
+    .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
+    header { text-align: center; margin-bottom: 60px; }
+
+    h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 7vw, 3rem); margin-bottom: 15px; }
+    .lead { font-size: 1.1rem; color: var(--text-muted); line-height: 1.5; }
+
+    .lista-frases { display: flex; flex-direction: column; gap: 30px; }
+    .card-frase {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 40px 30px; border-radius: 20px; text-align: center;
+    }
+
+    .tag-categoria { 
+      display: inline-block; font-size: 0.7rem; background: rgba(255,255,255,0.15); 
+      padding: 4px 10px; border-radius: 5px; margin-bottom: 15px; color: var(--text-muted);
+      text-transform: uppercase; letter-spacing: 1px;
+    }
+
+    .texto-frase { font-size: 1.3rem; line-height: 1.6; font-style: italic; margin-bottom: 15px; }
+    .autor-frase { display: block; color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 25px; }
+
+    .share-container { display: flex; justify-content: center; gap: 12px; }
+    .btn-share {
+      padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.8rem;
+      cursor: pointer; border: 1px solid rgba(255, 255, 255, 0.2); color: white;
+      background: rgba(255, 255, 255, 0.1); transition: all 0.3s ease;
+    }
+    .btn-share:hover { background: rgba(255, 255, 255, 0.3); }
+
+    footer { text-align: center; margin-top: 60px; }
+    footer a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Mágoa e Decepção</h1>
+      <p class="lead">Encontre uma <strong>reflexão sobre decepção</strong> e o conforto nas palavras de quem entende a dor da alma.</p>
+    </header>
+
+    <section id="lista-frases" class="lista-frases"></section>
+
+    <footer>
+      <p><a href="../../index.html">← Voltar para o Mensagem.net</a></p>
+    </footer>
+  </div>
+
+  <script>
+  
+  const frasesDados = [
+      { t: "A mágoa é o veneno que bebemos esperando que o outro morra.", a: "William Shakespeare", cat: "Reflexão" },
+      { t: "Guardar ressentimento é como segurar uma brasa acesa com a intenção de jogá-la em alguém; é você quem se queima.", a: "Buda", cat: "Sabedoria" },
+      { t: "A decepção é a única dor que faz você acordar e ver o mundo como ele realmente é.", a: "", cat: "Verdade" },
+      { t: "Às vezes, a mágoa não vem do que fizeram conosco, mas do que deixaram de fazer.", a: "", cat: "Sentimento" },
+      { t: "O silêncio é o grito mais alto de quem está profundamente magoado.", a: "", cat: "Silêncio" },
+      { t: "Ferir quem te ama é a forma mais triste de mostrar que você não ama a si mesmo.", a: "", cat: "Relacionamento" },
+      { t: "A mágoa endurece o coração, mas a verdade o liberta.", a: "", cat: "Cura" },
+      { t: "Certas decepções servem para nos mostrar que estávamos dando importância demais a quem não merecia nada.", a: "", cat: "Amadurecimento" },
+      { t: "Não se cura uma ferida ignorando a existência dela.", a: "", cat: "Cura" },
+      { t: "A mágoa é uma bagagem pesada demais para carregar por muito tempo.", a: "", cat: "Alívio" },
+      { t: "Dói descobrir que a consideração nunca foi mútua.", a: "", cat: "Decepção" },
+      { t: "A gente perdoa porque precisa de paz, não porque o outro merece o perdão.", a: "", cat: "Paz" },
+      { t: "O tempo passa, mas as marcas do que foi dito no momento da raiva permanecem.", a: "", cat: "Reflexão" },
+      { t: "A pior mágoa é aquela que nasce de um sorriso em que a gente confiava.", a: "", cat: "Confiança" },
+      { t: "Decepção é o preço que se paga por esperar demais de quem oferece de menos.", a: "", cat: "Expectativa" },
+      { t: "Minha mágoa não é raiva, é apenas o cansaço de ser sempre quem mais se importa.", a: "", cat: "Desabafo" },
+      { t: "Palavras podem ser esquecidas, mas a forma como você se sentiu com elas, nunca.", a: "", cat: "Memória" },
+      { t: "É difícil explicar que a mágoa não é algo que se escolhe sentir, é algo que sobra do impacto.", a: "", cat: "Sentimento" },
+      { t: "A mágoa é uma nuvem que impede o sol de brilhar dentro da gente.", a: "", cat: "Reflexão" },
+      { t: "Aprendi que a decepção é um sinal de trânsito: ela manda a gente mudar de caminho.", a: "", cat: "Mudança" },
+      { t: "Quem muito magoa, um dia acaba se tornando a própria solidão.", a: "", cat: "Consequência" },
+      { t: "O perdão limpa o espelho, mas a mágoa é quem conta a história da rachadura.", a: "", cat: "Metafora" },
+      { t: "Não gaste sua energia guardando rancor; gaste-a construindo sua própria alegria.", a: "", cat: "Superação" },
+      { t: "Magoar-se com alguém é dar a essa pessoa o controle sobre o seu humor.", a: "", cat: "Controle" },
+      { t: "A decepção ensina a não colocar a chave da nossa felicidade no bolso de mais ninguém.", a: "", cat: "Independência" },
+      { t: "Coração magoado é como terra seca: precisa de cuidado e tempo para voltar a dar frutos.", a: "", cat: "Tempo" },
+      { t: "Às vezes é preciso se afastar de quem te magoa para entender que você merece paz.", a: "", cat: "Paz" },
+      { t: "O peso da mágoa só diminui quando a gente solta a mão do passado.", a: "", cat: "Desapego" },
+      { t: "A gente morre um pouco a cada decepção que tenta esconder.", a: "", cat: "Sinceridade" },
+      { t: "Deixe que a mágoa vá embora com o vento, para que o seu coração possa voar de novo.", a: "", cat: "Liberdade" },
+      { t: "A mágoa não cura o erro alheio, apenas fere a sua própria alma.", a: "", cat: "Reflexão" },
+      { t: "Ser ferido por quem você protegeu é uma das dores mais amargas da vida.", a: "", cat: "Ingratidão" },
+      { t: "A maior lição da decepção é aprender a selecionar quem entra no seu mundo.", a: "", cat: "Seleção" },
+      { t: "Mágoa acumulada vira doença; fale, chore, mas não guarde.", a: "", cat: "Saúde" },
+      { t: "O silêncio de quem se importa é o aviso de que a mágoa transbordou.", a: "", cat: "Aviso" },
+      { t: "Não confunda perdão com permissão para ser magoado novamente.", a: "", cat: "Limites" },
+      { t: "A decepção dói, mas a clareza que ela traz é libertadora.", a: "", cat: "Clareza" },
+      { t: "Quem vive de mágoa acaba esquecendo como se vive de amor.", a: "", cat: "Alerta" },
+      { t: "A alma só descansa quando a mágoa deixa de ser o assunto principal.", a: "", cat: "Descanso" },
+      { t: "Magoar é humano, mas permanecer na mágoa é uma escolha de sofrimento.", a: "", cat: "Escolha" },
+      { t: "Toda mágoa carrega uma lição oculta sobre nós mesmos.", a: "", cat: "Autoconhecimento" },
+      { t: "Dê nome à sua dor para que ela pare de te assombrar no escuro.", a: "", cat: "Enfrentamento" },
+      { t: "O rancor é um muro que você constrói para se proteger, mas que acaba te isolando.", a: "", cat: "Isolamento" },
+      { t: "Magoar-se é normal; o que não é normal é deixar que a mágoa defina quem você é.", a: "", cat: "Identidade" },
+      { t: "A vida é curta demais para carregar pedras no lugar de sonhos.", a: "", cat: "Vida" },
+      { t: "A decepção nos torna mais seletivos, não mais frios.", a: "", cat: "Amadurecimento" },
+      { t: "Sua paz vale mais do que qualquer explicação que você queira ouvir de quem te magoou.", a: "", cat: "Paz" },
+      { t: "Abra a mão da mágoa para que o seu coração possa receber coisas novas.", a: "", cat: "Recomeço" },
+      { t: "A mágoa é um espinho: se você não tira, ela inflama.", a: "", cat: "Cuidado" },
+      { t: "Lembre-se: você é o autor da sua história, não deixe que uma decepção seja o capítulo final.", a: "", cat: "Superação" },
+      
+      // NOVAS FRASES ADICIONADAS
+      { t: "A mágoa é o último vínculo que nos prende a quem já nos deixou.", a: "", cat: "Desapego" },
+      { t: "Existem feridas que não sangram, mas que doem cada vez que o coração bate.", a: "", cat: "Sentimento" },
+      { t: "O problema de guardar mágoa é que o coração fica sem espaço para o que é bom.", a: "", cat: "Reflexão" },
+      { t: "A decepção é o fim da ilusão e o começo da realidade, por mais amarga que seja.", a: "", cat: "Verdade" },
+      { t: "Ninguém magoa ninguém sem primeiro ter magoado a si próprio.", a: "", cat: "Psicologia" },
+      { t: "Cuidado com o silêncio de quem você magoou; ele costuma ser o sinal de que a pessoa desistiu de você.", a: "", cat: "Alerta" },
+      { t: "A mágoa não é um sentimento, é uma decisão de reviver a dor todos os dias.", a: "", cat: "Escolha" },
+      { t: "Perdoar não é esquecer, é lembrar sem sentir o peso da mágoa no peito.", a: "", cat: "Cura" },
+      { t: "A maior mágoa é aquela que a gente sente de si mesmo por ter acreditado demais.", a: "", cat: "Autocrítica" },
+      { t: "A vida limpa o que a gente insiste em sujar com o rancor.", a: "", cat: "Vida" },
+      { t: "Magoar-se com o mundo é uma forma lenta de desaparecer.", a: "", cat: "Existencial" },
+      { t: "O coração magoado é um livro que parou de ser escrito.", a: "", cat: "Poesia" },
+      { t: "A decepção é uma peneira que só deixa ficar na sua vida o que é de verdade.", a: "", cat: "Filtro" },
+      { t: "Às vezes, a mágoa é apenas a nossa alma pedindo por um pouco de respeito.", a: "", cat: "Dignidade" },
+      { t: "Não deixe que a mágoa de ontem roube a alegria de quem você pode ser hoje.", a: "", cat: "Recomeço" },
+      { t: "A mágoa é um hóspede barulhento; ela não te deixa dormir e reclama de tudo.", a: "", cat: "Humor Reflexivo" },
+      { t: "Dói ser a pessoa que sempre compreende, mas que nunca é compreendida.", a: "", cat: "Empatia" },
+      { t: "Se o outro te magoou, o problema é dele. Se você continua magoado, o problema passa a ser seu.", a: "", cat: "Responsabilidade" },
+      { t: "O ressentimento é uma âncora que finge ser escudo.", a: "", cat: "Metafora" },
+      { t: "A paz começa onde a mágoa termina.", a: "", cat: "Paz" }
+    ];
+
+    const container = document.getElementById('lista-frases');
+
+    frasesDados.forEach((item, index) => {
+      const div = document.createElement('div');
+      div.className = 'card-frase';
+      const textoCompleto = item.a ? `"${item.t}" — ${item.a}` : item.t;
+      const textoCodificado = encodeURIComponent(textoCompleto);
+      
+      div.innerHTML = `
+        <span class="tag-categoria">${item.cat}</span>
+        <p class="texto-frase">${item.t}</p>
+        ${item.a ? `<span class="autor-frase">${item.a}</span>` : ''}
+        <div class="share-container">
+          <a href="https://api.whatsapp.com/send?text=${textoCodificado}" target="_blank" class="btn-share">WhatsApp</a>
+          <button id="btn-${index}" class="btn-share">Copiar</button>
+        </div>
+      `;
+      container.appendChild(div);
+
+      document.getElementById(`btn-${index}`).addEventListener('click', function() {
+        const el = document.createElement('textarea');
+        el.value = textoCompleto;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+        const originalText = this.innerText;
+        this.innerText = "Copiado!";
+        setTimeout(() => { this.innerText = originalText; }, 2000);
+      });
+    });
+  </script>
+</body>
+</html>
