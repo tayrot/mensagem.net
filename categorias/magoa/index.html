@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reflexão sobre Decepção e Mágoa: Frases de Clarice Lispector — Mensagem.net</title>
   
-  <meta name="description" content="Encontre a melhor reflexão sobre decepção e frases de mágoa. Inclui pensamentos de Clarice Lispector sobre decepção para ajudar você a traduzir sua dor." />
+  <title>Mensagem de Mágoa, Decepção e Frase sobre Mágoa — Mensagem.net</title>
   
-  <meta name="keywords" content="frase decepção, clarice lispector decepção, reflexão sobre decepção, mensagens de mágoa, decepção com amigos, dor no peito" />
+  <meta name="description" content="Encontre a mensagem de mágoa e decepção ideal. Confira nossa seleção com frase sobre mágoa e reflexões profundas para expressar a dor do coração." />
+  
+  <meta name="keywords" content="mensagem de mágoa, mensagem sobre mágoa, frase sobre mágoa, frases de mágoa e decepção, reflexão sobre mágoa" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,9 +28,13 @@
       font-family: 'Inter', sans-serif;
       color: var(--text-main);
       min-height: 100vh;
+      /* NOVA IMAGEM DE FUNDO - MAIS LEVE E ESTÁVEL */
       background: linear-gradient(var(--overlay), var(--overlay)), 
-                  url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-      background-size: cover; background-position: center; background-attachment: fixed;
+                  url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-color: #1a1a1a; /* Cor de fundo caso a imagem falhe */
     }
 
     .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
@@ -45,7 +50,9 @@
       -webkit-backdrop-filter: blur(12px);
       border: 1px solid rgba(255, 255, 255, 0.1);
       padding: 40px 30px; border-radius: 20px; text-align: center;
+      transition: transform 0.3s ease;
     }
+    .card-frase:hover { transform: translateY(-5px); }
 
     .tag-categoria { 
       display: inline-block; font-size: 0.7rem; background: rgba(255,255,255,0.15); 
@@ -64,15 +71,15 @@
     }
     .btn-share:hover { background: rgba(255, 255, 255, 0.3); }
 
-    footer { text-align: center; margin-top: 60px; }
+    footer { text-align: center; margin-top: 60px; padding-bottom: 40px; }
     footer a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>Mágoa e Decepção</h1>
-      <p class="lead">Encontre uma <strong>reflexão sobre decepção</strong> e o conforto nas palavras de quem entende a dor da alma.</p>
+      <h1>Mensagem de Mágoa e Decepção</h1>
+      <p class="lead">Encontre a <strong>mensagem sobre mágoa</strong> ou a <strong>frase sobre mágoa</strong> que traduz o seu silêncio e ajuda a curar a alma.</p>
     </header>
 
     <section id="lista-frases" class="lista-frases"></section>
@@ -83,8 +90,7 @@
   </div>
 
   <script>
-  
-  const frasesDados = [
+const frasesDados = [
       { t: "A mágoa é o veneno que bebemos esperando que o outro morra.", a: "William Shakespeare", cat: "Reflexão" },
       { t: "Guardar ressentimento é como segurar uma brasa acesa com a intenção de jogá-la em alguém; é você quem se queima.", a: "Buda", cat: "Sabedoria" },
       { t: "A decepção é a única dor que faz você acordar e ver o mundo como ele realmente é.", a: "", cat: "Verdade" },
@@ -158,6 +164,7 @@
       { t: "O ressentimento é uma âncora que finge ser escudo.", a: "", cat: "Metafora" },
       { t: "A paz começa onde a mágoa termina.", a: "", cat: "Paz" }
     ];
+
 
     const container = document.getElementById('lista-frases');
 

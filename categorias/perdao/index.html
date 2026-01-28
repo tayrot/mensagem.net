@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mensagem sobre Perdão e Frase de Perdão: Alcance a Paz Interior — Mensagem.net</title>
   
-  <meta name="description" content="Encontre a mensagem sobre perdão ideal e a frase de perdão que toca o coração. Reflexões sobre reconciliação, autoperdão e a liberdade de seguir em frente." />
+  <title>Mensagem de Perdão e Frase sobre Perdão: Alcance a Paz Interior — Mensagem.net</title>
   
-  <meta name="keywords" content="mensagem sobre perdão, frase de perdão, pedir desculpas, reconciliação, frases de paz, perdoar alguém" />
+  <meta name="description" content="Encontre a melhor mensagem sobre perdão e frase de perdão para curar feridas. Reflexões profundas sobre reconciliação, autoperdão e a paz de seguir em frente." />
+  
+  <meta name="keywords" content="mensagem perdão, mensagem de perdão, frase de perdão, frase sobre perdão, mensagem sobre perdão, reconciliação" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,16 +24,17 @@
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    body {
+  body {
       font-family: 'Inter', sans-serif;
       color: var(--text-main);
       min-height: 100vh;
-      /* Imagem que remete a leveza e luz para a categoria perdão */
+      /* NOVA IMAGEM DE FUNDO - MAIS LEVE E ESTÁVEL */
       background: linear-gradient(var(--overlay), var(--overlay)), 
-                  url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+                  url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
+      background-color: #1a1a1a; /* Cor de fundo caso a imagem falhe */
     }
 
     .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
@@ -42,6 +44,7 @@
       font-family: 'Playfair Display', serif;
       font-size: clamp(2rem, 8vw, 3.5rem);
       margin-bottom: 15px;
+      line-height: 1.2;
     }
 
     .lead { font-size: 1.2rem; color: var(--text-muted); }
@@ -55,6 +58,20 @@
       padding: 40px 30px;
       border-radius: 20px;
       text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .card-frase:hover { transform: translateY(-5px); }
+
+    .tag-categoria { 
+      display: inline-block; 
+      font-size: 0.7rem; 
+      background: rgba(255,255,255,0.15); 
+      padding: 4px 10px; 
+      border-radius: 5px; 
+      margin-bottom: 15px; 
+      color: var(--text-main);
+      text-transform: uppercase;
+      font-weight: 600;
     }
 
     .texto-frase { font-size: 1.4rem; line-height: 1.6; font-style: italic; margin-bottom: 15px; }
@@ -66,17 +83,6 @@
       text-transform: uppercase;
       letter-spacing: 1.5px;
       margin-bottom: 25px;
-    }
-
-    .tag-categoria { 
-      display: inline-block; 
-      font-size: 0.7rem; 
-      background: rgba(255,255,255,0.1); 
-      padding: 4px 10px; 
-      border-radius: 5px; 
-      margin-bottom: 15px; 
-      color: var(--text-muted);
-      text-transform: uppercase;
     }
 
     .share-container { display: flex; justify-content: center; gap: 12px; }
@@ -96,19 +102,20 @@
 
     .btn-share:hover { background: rgba(255, 255, 255, 0.3); }
 
-    footer { text-align: center; margin-top: 60px; }
-    footer a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
+    footer { text-align: center; margin-top: 60px; padding-bottom: 40px; }
+    footer a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; border-bottom: 1px solid transparent; }
+    footer a:hover { border-bottom: 1px solid var(--text-muted); }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>O Poder do Perdão</h1>
-      <p class="lead">Cure o seu coração e liberte sua alma.</p>
+      <h1>Mensagem de Perdão e Paz</h1>
+      <p class="lead">Cure o seu coração e liberte sua alma através da compaixão.</p>
     </header>
 
-    <div style="text-align:center; color: var(--text-muted); margin-bottom: 40px; font-size: 0.95rem; line-height: 1.6;">
-      <p>O perdão não muda o passado, mas amplia o futuro. Explore cada <strong>mensagem sobre perdão</strong> abaixo e encontre a <strong>frase de perdão</strong> que você precisa para recomeçar.</p>
+    <div style="text-align:center; color: var(--text-muted); margin-bottom: 40px; font-size: 1rem; line-height: 1.6;">
+      <p>O ato de perdoar amplia o futuro. Encontre abaixo a <strong>mensagem sobre perdão</strong> ideal para o seu momento ou aquela <strong>frase de perdão</strong> que ajudará você a soltar o peso do passado e recomeçar.</p>
     </div>
 
     <section id="lista-frases" class="lista-frases"></section>
@@ -119,7 +126,7 @@
   </div>
 
   <script>
-    const frasesDados = [
+  const frasesDados = [
       { t: "O perdão é um presente que você dá a si mesmo, para não carregar o lixo dos outros.", a: "", cat: "Mensagem sobre Perdão" },
       { t: "Perdoar não é esquecer o que aconteceu, é lembrar sem sentir dor.", a: "", cat: "Frase de Perdão" },
       { t: "O fraco nunca pode perdoar. O perdão é um atributo dos fortes.", a: "Mahatma Gandhi", cat: "Sabedoria" },

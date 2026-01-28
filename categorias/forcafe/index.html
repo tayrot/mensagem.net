@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Força e Fé: Mensagens para Momentos Difíceis — Mensagem.net</title>
   
-  <meta name="description" content="Encontre a mensagem para momentos difíceis que você precisa. Frases de força e superação, palavras de incentivo e fé para atravessar qualquer desafio." />
+  <title>Mensagem de Força e Fé: Palavras para Momentos Difíceis — Mensagem.net</title>
   
-  <meta name="keywords" content="mensagem para momentos difíceis, frases de força e superação, palavras de incentivo, fé em deus, superação pessoal, motivação" />
+  <meta name="description" content="Encontre a melhor mensagem de força e fé em deus para superar desafios. Confira frases de superação, força e fé, além de mensagens de ânimo e força para hoje." />
+  
+  <meta name="keywords" content="mensagem de força e fé, mensagens de força e fé em momentos difíceis, frases superação força e fé, mensagem de fé e força, mensagem de força e coragem, mensagem de força e fé em deus, mensagem de ânimo e força" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,12 +19,12 @@
       --text-main: #ffffff;
       --text-muted: rgba(255, 255, 255, 0.7);
       --card-bg: rgba(255, 255, 255, 0.1);
-      --overlay: rgba(0, 0, 0, 0.4); /* Overlay mais claro para passar sensação de esperança */
+      --overlay: rgba(0, 0, 0, 0.45);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    body {
+   body {
       font-family: 'Inter', sans-serif;
       color: var(--text-main);
       min-height: 100vh;
@@ -35,12 +36,13 @@
     }
 
     .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
-    header { text-align: center; margin-bottom: 60px; }
+    header { text-align: center; margin-bottom: 50px; }
 
     h1 {
       font-family: 'Playfair Display', serif;
       font-size: clamp(2rem, 8vw, 3.5rem);
       margin-bottom: 15px;
+      line-height: 1.2;
     }
 
     .lead { font-size: 1.2rem; color: var(--text-muted); }
@@ -56,17 +58,7 @@
       text-align: center;
       transition: transform 0.3s ease;
     }
-
-    .texto-frase { font-size: 1.4rem; line-height: 1.6; font-weight: 500; margin-bottom: 15px; }
-
-    .autor-frase {
-      display: block;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 25px;
-    }
+    .card-frase:hover { transform: translateY(-5px); }
 
     .tag-categoria { 
       display: inline-block; 
@@ -77,6 +69,18 @@
       margin-bottom: 15px; 
       color: #fff;
       text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .texto-frase { font-size: 1.4rem; line-height: 1.6; font-style: italic; margin-bottom: 15px; }
+
+    .autor-frase {
+      display: block;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 25px;
     }
 
     .share-container { display: flex; justify-content: center; gap: 12px; }
@@ -94,21 +98,21 @@
       transition: all 0.3s ease;
     }
 
-    .btn-share:hover { background: rgba(255, 255, 255, 0.3); transform: translateY(-2px); }
+    .btn-share:hover { background: rgba(255, 255, 255, 0.3); }
 
-    footer { text-align: center; margin-top: 60px; }
+    footer { text-align: center; margin-top: 60px; padding-bottom: 40px; }
     footer a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>Força e Fé</h1>
-      <p class="lead">Para dias difíceis, coragem. Para todos os dias, fé.</p>
+      <h1>Mensagem de Força e Fé</h1>
+      <p class="lead">Luz para o seu caminho e coragem para o seu coração.</p>
     </header>
 
-    <div style="text-align:center; color: var(--text-muted); margin-bottom: 40px; font-size: 0.95rem; line-height: 1.6;">
-      <p>Encontre aqui a <strong>mensagem para momentos difíceis</strong> que renovará seu espírito. Use estas <strong>frases de força e superação</strong> como <strong>palavras de incentivo</strong> para o seu dia.</p>
+    <div style="text-align:center; color: var(--text-muted); margin-bottom: 40px; font-size: 1rem; line-height: 1.6;">
+      <p>Buscando <strong>mensagens de força e fé em momentos difíceis</strong>? Nossa seleção reúne <strong>frases de superação, força e fé</strong> para ajudar você a renovar sua <strong>fé em Deus</strong> e encontrar a <strong>mensagem de ânimo e força</strong> que seu dia precisa.</p>
     </div>
 
     <section id="lista-frases" class="lista-frases"></section>

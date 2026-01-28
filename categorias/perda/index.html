@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mensagens de Luto, Saudade e Consolo — Mensagem.net</title>
   
-  <meta name="description" content="Encontre conforto em mensagens de luto, frases de saudade eterna e reflexões sobre a perda de entes queridos. Palavras de apoio para momentos de dor e despedida." />
+  <title>Mensagem de Luto e Conforto: Palavras para a Dor da Perda — Mensagem.net</title>
   
+  <meta name="description" content="Encontre uma mensagem de conforto luto e frases de luto para um amigo. Seleção de palavras de conforto luto para quem perdeu um ente querido e enfrenta a dor da perda." />
+  <meta name="keywords" content="mensagem de luto, mensagem de conforto para quem perdeu um ente querido, palavra de conforto luto, frase de luto para um amigo, a dor da perda frases" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -15,8 +17,8 @@
     :root {
       --text-main: #ffffff;
       --text-muted: rgba(255, 255, 255, 0.7);
-      --card-bg: rgba(255, 255, 255, 0.1);
-      --overlay: rgba(0, 0, 0, 0.6); /* Overlay levemente mais escuro para o tema */
+      --card-bg: rgba(255, 255, 255, 0.12);
+      --overlay: rgba(0, 0, 0, 0.65);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -25,83 +27,97 @@
       font-family: 'Inter', sans-serif;
       color: var(--text-main);
       min-height: 100vh;
-      /* Imagem de fundo fixa para consistência visual */
+      /* NOVA IMAGEM DE FUNDO - MAIS LEVE E ESTÁVEL */
       background: linear-gradient(var(--overlay), var(--overlay)), 
-                  url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+                  url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
+      background-color: #1a1a1a; /* Cor de fundo caso a imagem falhe */
     }
 
     .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
-    header { text-align: center; margin-bottom: 60px; }
+    header { text-align: center; margin-bottom: 50px; }
 
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 8vw, 3.5rem);
-      margin-bottom: 15px;
+      font-size: clamp(1.8rem, 6vw, 3rem);
+      margin-bottom: 20px;
+      line-height: 1.2;
     }
 
-    .lead { font-size: 1.2rem; color: var(--text-muted); }
-    .lista-frases { display: flex; flex-direction: column; gap: 30px; }
+    .lead { font-size: 1.1rem; color: var(--text-muted); line-height: 1.6; }
+
+    .lista-frases { display: flex; flex-direction: column; gap: 25px; }
 
     .card-frase {
       background: var(--card-bg);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 40px 30px;
-      border-radius: 20px;
+      padding: 35px 25px;
+      border-radius: 15px;
       text-align: center;
     }
 
-    .texto-frase { font-size: 1.4rem; line-height: 1.6; font-style: italic; margin-bottom: 15px; }
+    .tag-seo {
+      display: inline-block;
+      font-size: 0.7rem;
+      background: rgba(255,255,255,0.15);
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .texto-frase { font-size: 1.35rem; line-height: 1.6; font-style: italic; margin-bottom: 15px; }
 
     .autor-frase {
       display: block;
       color: var(--text-muted);
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
 
-    .share-container { display: flex; justify-content: center; gap: 12px; }
+    .share-container { display: flex; justify-content: center; gap: 10px; }
 
     .btn-share {
-      padding: 10px 20px;
-      border-radius: 8px;
+      padding: 8px 18px;
+      border-radius: 6px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       cursor: pointer;
       border: 1px solid rgba(255, 255, 255, 0.2);
       color: white;
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.05);
       transition: all 0.3s ease;
     }
 
-    .btn-share:hover { background: rgba(255, 255, 255, 0.3); }
+    .btn-share:hover { background: rgba(255, 255, 255, 0.2); }
 
-    footer { text-align: center; margin-top: 60px; }
+    footer { text-align: center; margin-top: 60px; padding-bottom: 40px; }
     footer a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>Luto e Saudade</h1>
-      <p class="lead">Palavras de consolo e esperança para honrar quem partiu.</p>
+      <h1>Mensagem de Luto e Conforto</h1>
+      <p class="lead">Palavras de carinho para abraçar o coração de quem enfrenta a dor da perda.</p>
     </header>
 
-    <div style="text-align:center; color: var(--text-muted); margin-bottom: 40px; font-size: 0.95rem;">
-      <p>O luto é o amor que não tem mais para onde ir. Encontre aqui mensagens de luto para expressar sua saudade e buscar forças no conforto das palavras.</p>
+    <div style="text-align:center; color: var(--text-muted); margin-bottom: 40px; font-size: 0.95rem; line-height: 1.6;">
+      <p>Encontre aqui a <strong>mensagem de conforto luto</strong> ideal. Oferecemos <strong>palavra de conforto luto</strong> para momentos difíceis e <strong>frase de luto para um amigo</strong> para honrar a memória de quem partiu.</p>
     </div>
 
     <section id="lista-frases" class="lista-frases"></section>
 
     <footer>
-      <p><a href="../../index.html">← Voltar para o Mensagem.net</a></p>
+      <p><a href="../../index.html">← Voltar para Mensagem.net</a></p>
     </footer>
   </div>
 
@@ -167,7 +183,9 @@
       const textoCompleto = item.a ? `"${item.t}" — ${item.a}` : item.t;
       const textoCodificado = encodeURIComponent(textoCompleto);
       
+      // Ajuste: usamos 'item.c' para evitar o erro de undefined na tag-seo
       div.innerHTML = `
+        <span class="tag-seo">${item.c || 'Luto'}</span>
         <p class="texto-frase">${item.t}</p>
         ${item.a ? `<span class="autor-frase">${item.a}</span>` : ''}
         <div class="share-container">

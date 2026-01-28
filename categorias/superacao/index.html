@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
   <title>Mensagem de Superação e Motivação: Frases de Superação de Vida — Mensagem.net</title>
   
   <meta name="description" content="Encontre a melhor mensagem de superação para o seu dia. Seleção exclusiva com mensagens de superação e motivação e frases de superação de vida para vencer desafios." />
   
-  <meta name="keywords" content="mensagem de superação, mensagens de superação e motivação, frases de superação de vida, dar a volta por cima, superação pessoal" />
+  <meta name="keywords" content="mensagem de superação, mensagens de superação e motivação, frases de superação de vida, frases motivacionais superação, frases superação força e fé, dar a volta por cima" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +24,7 @@
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    body {
+     body {
       font-family: 'Inter', sans-serif;
       color: var(--text-main);
       min-height: 100vh;
@@ -35,11 +36,16 @@
     }
 
     .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
-    header { text-align: center; margin-bottom: 60px; }
+    header { text-align: center; margin-bottom: 50px; }
 
-    h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 8vw, 3.5rem); margin-bottom: 15px; }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 8vw, 3.5rem);
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+
     .lead { font-size: 1.2rem; color: var(--text-muted); }
-
     .lista-frases { display: flex; flex-direction: column; gap: 30px; }
 
     .card-frase {
@@ -50,37 +56,63 @@
       padding: 40px 30px;
       border-radius: 20px;
       text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .card-frase:hover { transform: translateY(-5px); }
+
+    .tag-categoria { 
+      display: inline-block; 
+      font-size: 0.7rem; 
+      background: rgba(255,255,255,0.2); 
+      padding: 4px 12px; 
+      border-radius: 50px; 
+      margin-bottom: 15px; 
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: 600;
     }
 
     .texto-frase { font-size: 1.4rem; line-height: 1.6; font-weight: 500; margin-bottom: 15px; }
-    .autor-frase { display: block; color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; margin-bottom: 25px; }
 
-    .tag-categoria { 
-      display: inline-block; font-size: 0.7rem; background: rgba(255,255,255,0.2); 
-      padding: 4px 12px; border-radius: 50px; margin-bottom: 15px; color: #fff; text-transform: uppercase;
+    .autor-frase {
+      display: block;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 25px;
     }
 
     .share-container { display: flex; justify-content: center; gap: 12px; }
+
     .btn-share {
-      padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.8rem;
-      cursor: pointer; border: 1px solid rgba(255, 255, 255, 0.2); color: white;
-      background: rgba(255, 255, 255, 0.1); transition: all 0.3s ease;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.8rem;
+      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      background: rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
     }
+
     .btn-share:hover { background: rgba(255, 255, 255, 0.3); }
 
-    footer { text-align: center; margin-top: 60px; }
+    footer { text-align: center; margin-top: 60px; padding-bottom: 40px; }
     footer a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>Superação e Vida</h1>
-      <p class="lead">Para quem decidiu vencer, o "impossível" é apenas um detalhe.</p>
+      <h1>Mensagens de Superação e Motivação</h1>
+      <p class="lead">Onde a vontade de vencer é maior que qualquer obstáculo.</p>
     </header>
 
-    <div style="text-align:center; color: var(--text-muted); margin-bottom: 40px; font-size: 0.95rem; line-height: 1.6;">
-      <p>Buscando uma <strong>mensagem de superação</strong>? Nossa coleção de <strong>mensagens de superação e motivação</strong> oferece as melhores <strong>frases de superação de vida</strong> para te ajudar a dar a volta por cima.</p>
+    <div style="text-align:center; color: var(--text-muted); margin-bottom: 40px; font-size: 1rem; line-height: 1.6;">
+      <p>Procurando uma <strong>mensagem de superação</strong> inspiradora? Confira nossa seleção exclusiva de <strong>mensagens de superação e motivação</strong> e as melhores <strong>frases de superação de vida</strong>. Aqui você encontra as <strong>frases motivacionais superação</strong> ideais para dar a volta por cima hoje.</p>
     </div>
 
     <section id="lista-frases" class="lista-frases"></section>
@@ -153,7 +185,6 @@
       { t: "O universo conspira a favor de quem não desiste.", a: "", cat: "Vida" },
       { t: "Hoje é um bom dia para começar a vencer.", a: "", cat: "Mensagem de Superação" }
     ];
-
     const container = document.getElementById('lista-frases');
 
     frasesDados.forEach((item, index) => {
