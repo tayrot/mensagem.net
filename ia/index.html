@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Como você está se sentindo?</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin:0;
+  min-height:100vh;
+  font-family:Inter,sans-serif;
+  background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+  url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1920&q=80");
+  background-size:cover;
+  background-position:center;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.container{
+  max-width:700px;
+  width:100%;
+  padding:40px;
+  background:rgba(255,255,255,.1);
+  backdrop-filter:blur(12px);
+  border-radius:24px;
+  text-align:center;
+}
+
+h1{
+  font-family:'Playfair Display',serif;
+  margin-bottom:15px;
+}
+
+p{
+  color:rgba(255,255,255,.8);
+}
+
+textarea{
+  width:100%;
+  min-height:120px;
+  border-radius:12px;
+  border:none;
+  padding:15px;
+  margin-top:20px;
+  font-size:16px;
+  resize:none;
+}
+
+button{
+  margin-top:20px;
+  padding:14px 35px;
+  border:none;
+  border-radius:30px;
+  background:white;
+  cursor:pointer;
+  font-weight:600;
+}
+
+#resposta{
+  margin-top:30px;
+  line-height:1.7;
+  color:#fff;
+}
+
+.loading{
+  opacity:.6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Como você está se sentindo?</h1>
+  <p>Escreva livremente. Vamos gerar uma mensagem pensada especialmente para você.</p>
+
+  <textarea id="sentimento" placeholder="Ex: Estou me sentindo perdido, cansado, magoado..."></textarea>
+
+  <button onclick="enviar()">Receber mensagem</button>
+
+  <div id="resposta"></div>
+</div>
+
+<script>
+async function enviar(){
+
+  const texto = document.getElementById("sentimento").value.trim();
+  const respostaDiv = document.getElementById("resposta");
+
+  if(!texto){
+    alert("Por favor, escreva como você está se sentindo.");
+    return;
+  }
+
+  respostaDiv.innerHTML = "<p class='loading'>Gerando sua mensagem...</p>";
+
+  try{
+
+    const res = await fetch("/api/chat", {
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify({ sentimento: texto })
+    });
+
+    const data = await res.json();
+
+    respostaDiv.innerHTML = `<p>${data.resposta.replace(/\n/g,"<br>")}</p>`;
+
+  }catch(e){
+    respostaDiv.innerHTML = "Erro ao gerar mensagem. Tente novamente.";
+  }
+}
+</script>
+
+</body>
+</html>
