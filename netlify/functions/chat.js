@@ -1,11 +1,19 @@
 const OpenAI = require("openai");
 
+/**
+ * Limite simples em memória (MVP)
+ * 5 mensagens por IP / dia
+ */
+const usage = {};
+const DAILY_LIMIT = 5;
+
 const client = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
 
 exports.handler = async function(event) {
 
+  // Aceita somente POST
   if (event.httpMethod !== "POST") {
     return {
       statusCode: 405,
@@ -15,19 +23,42 @@ exports.handler = async function(event) {
 
   try {
 
+    // Captura IP do usuário
+    const ip =
+      event.headers["x-forwarded-for"] ||
+      event.headers["client-ip"] ||
+      "unknown";
+
+    const today = new Date().toISOString().slice(0,10);
+
+    if (!usage[ip] || usage[ip].date !== today) {
+      usage[ip] = { count: 0, date: today };
+    }
+
+    if (usage[ip].count >= DAILY_LIMIT) {
+      return {
+        statusCode: 429,
+        body: JSON.stringify({
+          erro: "Você já recebeu 5 mensagens hoje. Volte amanhã 💛"
+        })
+      };
+    }
+
+    usage[ip].count++;
+
     const { sentimento } = JSON.parse(event.body || "{}");
 
     if (!sentimento) {
       return {
         statusCode: 400,
-        body: JSON.stringify({ erro: "Sentimento vazio" })
+        body: JSON.stringify({ erro: "Escreva como você está se sentindo." })
       };
     }
 
     if (sentimento.length > 600) {
       return {
         statusCode: 400,
-        body: JSON.stringify({ erro: "Texto muito longo" })
+        body: JSON.stringify({ erro: "Texto muito longo." })
       };
     }
 
@@ -53,8 +84,6 @@ Agora responda seguindo APENAS UM dos formatos abaixo.
 ────────────────────────
 
 CASO 1 — Pedido direto de mensagem OU usuário não quer falar sobre si:
-
-Formato:
 
 Linha 1:
 Aqui vai uma mensagem para você:
