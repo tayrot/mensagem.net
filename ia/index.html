@@ -95,11 +95,11 @@ async function enviar(){
   const respostaDiv = document.getElementById("resposta");
 
   if(!texto){
-    alert("Por favor, escreva como você está se sentindo.");
+    alert("Por favor escreva algo.");
     return;
   }
 
-  respostaDiv.innerHTML = "<p class='loading'>Gerando sua mensagem...</p>";
+  respostaDiv.innerHTML = "Gerando mensagem...";
 
   try{
 
@@ -108,16 +108,27 @@ async function enviar(){
       headers:{
         "Content-Type":"application/json"
       },
-      body:JSON.stringify({ sentimento: texto })
+      body:JSON.stringify({ sentimento:texto })
     });
 
     const data = await res.json();
 
-    respostaDiv.innerHTML = `<p>${data.resposta.replace(/\n/g,"<br>")}</p>`;
+    if(!res.ok){
+      respostaDiv.innerHTML = data.erro || "Erro ao gerar mensagem.";
+      return;
+    }
+
+    if(!data.resposta){
+      respostaDiv.innerHTML = "Sem resposta da IA (provável falta de créditos).";
+      return;
+    }
+
+    respostaDiv.innerHTML = data.resposta.replace(/\n/g,"<br>");
 
   }catch(e){
-  respostaDiv.innerHTML = "Erro: " + e.message;
+    respostaDiv.innerHTML = "Erro: "
 }
+
 }
 </script>
 
