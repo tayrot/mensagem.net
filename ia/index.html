@@ -116,8 +116,8 @@ async function enviar(){
     respostaDiv.innerHTML = `<p>${data.resposta.replace(/\n/g,"<br>")}</p>`;
 
   }catch(e){
-    respostaDiv.innerHTML = "Erro ao gerar mensagem. Tente novamente.";
-  }
+  respostaDiv.innerHTML = "Erro: " + e.message;
+}
 }
 </script>
 
