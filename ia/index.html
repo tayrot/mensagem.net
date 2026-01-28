@@ -125,7 +125,7 @@ async function enviar(){
 
     const textoIA = data.resposta;
 
-const textoLimpo = textoIA.replace(/\n/g, " ");
+const textoLimpo = textoIA + "\n\nhttps://mensagem.net";
 
 const textoCodificado = encodeURIComponent(textoLimpo);
 
