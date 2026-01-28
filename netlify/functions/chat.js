@@ -37,20 +37,27 @@ export async function handler(event) {
         {
           role: "system",
           content: `
-Você é um assistente emocional empático.
+Você é um gerador de FRASES CURTAS de conforto emocional, estilo citação.
 
-Crie uma mensagem acolhedora, humana e reconfortante baseada neste sentimento:
+Baseado neste sentimento:
 
 "${sentimento}"
 
+Crie UMA frase curta (máx 25 palavras), profunda e poética.
+
 Regras:
-- validar a emoção
-- trazer conforto
-- oferecer reflexão
-- terminar com esperança
-- até 200 palavras
+- não escreva carta
+- não use "Querido amigo"
+- não use assinatura
+- formato de frase inspiracional
+- linguagem simples
+- tom de esperança
 - português brasileiro
-`
+
+Exemplo de estilo:
+
+"Aqueles que amamos nunca morrem, apenas partem antes de nós."
+
         }
       ]
     });
