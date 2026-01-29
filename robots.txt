@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /netlify/
+Disallow: /functions/
+
+Sitemap: https://mensagem.net/sitemap.xml
