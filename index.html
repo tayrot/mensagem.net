@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Mensagem.net — Apoio Emocional e Mensagens Personalizadas por IA</title>
-  <meta name="description" content="Encontre conforto com nosso Amigo IA e mensagens para momentos difíceis: luto, término de namoro, superação, traição e perdão. Palavras que curam." />
-  <meta name="keywords" content="mensagens para momentos difíceis, mensagem de término, superação, frases de luto, mensagem de perdão, IA de apoio emocional" />
+  <title>Mensagem.net — Portal de Conforto, Superação e Apoio com IA</title>
+  <meta name="description" content="Encontre conforto com o Amigo IA e mensagens para momentos difíceis de luto, término e superação. Palavras que confortam o coração." />
+  <meta name="keywords" content="mensagens de conforto, superação, amparo emocional, IA de apoio, término de namoro, luto, frases de motivação" />
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,10 +15,10 @@
   <style>
     :root {
       --primary: #ffffff;
-      --accent: #e0e0e0;
       --text-main: #ffffff;
       --text-muted: rgba(255, 255, 255, 0.8);
       --overlay: rgba(0, 0, 0, 0.5);
+      --accent-heart: #ff4d4d;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -41,19 +41,25 @@
     
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2.2rem, 7vw, 4rem);
-      margin-bottom: 20px;
-      text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
+      margin-bottom: 15px;
+      text-shadow: 0 4px 15px rgba(0,0,0,0.4);
     }
 
     .lead {
-      font-size: 1.2rem;
-      max-width: 800px;
-      margin: 0 auto;
+      font-size: 1.3rem;
       color: var(--text-muted);
+      font-weight: 400;
     }
 
-    /* Nova Seção de Destaque IA */
+    .heart-icon {
+      color: var(--accent-heart);
+      display: inline-block;
+      margin-left: 5px;
+      filter: drop-shadow(0 0 8px rgba(255, 77, 77, 0.5));
+    }
+
+    /* Destaque IA (Diferencial) */
     .ai-hero {
       background: rgba(255, 255, 255, 0.15);
       backdrop-filter: blur(15px);
@@ -63,12 +69,12 @@
       padding: 50px 30px;
       text-align: center;
       margin-bottom: 60px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
     }
 
     .ai-hero h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin-bottom: 15px;
     }
 
@@ -76,12 +82,12 @@
       display: inline-block;
       background: #fff;
       color: #000;
-      padding: 16px 35px;
+      padding: 18px 40px;
       border-radius: 50px;
       text-decoration: none;
       font-weight: 600;
       margin-top: 20px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: all 0.3s ease;
     }
 
     .ai-btn:hover {
@@ -89,6 +95,7 @@
       box-shadow: 0 10px 20px rgba(255,255,255,0.2);
     }
 
+    /* Grid de Categorias */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -100,46 +107,95 @@
       background: rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(8px);
       padding: 35px 25px;
-      border-radius: 15px;
+      border-radius: 18px;
       text-decoration: none;
-      transition: all 0.3s ease;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .card:hover {
-      background: rgba(255, 255, 255, 0.12);
-      border-color: rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-8px);
+      border-color: rgba(255, 255, 255, 0.4);
     }
 
-    .card h3 {
-      color: #fff;
-      margin-bottom: 10px;
-      font-size: 1.4rem;
-    }
+    .card h3 { color: #fff; margin-bottom: 12px; font-size: 1.5rem; }
+    .card p { color: rgba(255, 255, 255, 0.75); font-size: 0.95rem; }
 
-    .card p {
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 0.95rem;
-    }
-
-    .seo-content {
-      background: rgba(0,0,0,0.2);
-      padding: 40px;
-      border-radius: 20px;
+    /* SEO Article */
+    .seo-text {
+      background: rgba(0,0,0,0.25);
+      padding: 45px;
+      border-radius: 24px;
       margin-bottom: 60px;
-      font-size: 1rem;
+      font-size: 1.05rem;
       color: rgba(255,255,255,0.7);
+      line-height: 1.8;
     }
+    .seo-text strong { color: #fff; }
+
+    /* Formulário de Contato Netlify */
+    .contact-section {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 50px 30px;
+      border-radius: 24px;
+      margin-bottom: 80px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .contact-section h2 { 
+      margin-bottom: 25px; 
+      text-align: center; 
+      font-family: 'Playfair Display', serif; 
+      font-size: 2rem;
+    }
+
+    form { display: grid; gap: 15px; max-width: 600px; margin: 0 auto; }
+
+    input, textarea {
+      width: 100%;
+      padding: 15px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      font-family: inherit;
+      outline: none;
+    }
+
+    input:focus, textarea:focus { border-color: rgba(255,255,255,0.5); }
+
+    button[type="submit"] {
+      background: #fff;
+      color: #000;
+      padding: 16px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: 0.3s;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    button:hover { background: var(--accent-heart); color: #fff; }
 
     footer {
       text-align: center;
-      padding: 40px 0;
+      padding: 50px 0;
       color: rgba(255, 255, 255, 0.5);
       border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.9rem;
     }
 
     @media (max-width: 768px) {
-      header { padding: 50px 0 30px; }
+      header { padding: 60px 0 30px; }
+      h1 { font-size: 2.8rem; }
+      .ai-hero { padding: 35px 20px; }
     }
   </style>
 
@@ -149,9 +205,8 @@
     "@type": "WebApplication",
     "name": "Amigo IA Mensagem.net",
     "url": "https://mensagem.net/ia/",
-    "applicationCategory": "HealthApplication",
-    "about": "Apoio emocional e mensagens de superação personalizadas",
-    "browserRequirements": "Requires JavaScript",
+    "applicationCategory": "MentalHealthApplication",
+    "description": "Ferramenta de IA que gera mensagens personalizadas de conforto e apoio emocional.",
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -164,62 +219,69 @@
   <div class="container">
     
     <header>
-  <h1>Mensagem.net</h1>
-  <p class="lead">Mensagens que confortam o coração <span class="heart-icon">❤️</span></p>
-</header>
+      <h1>Mensagem.net</h1>
+      <p class="lead">Mensagens que confortam o coração <span class="heart-icon">❤️</span></p>
+    </header>
 
     <section class="ai-hero">
-      <h2>Precisa de uma palavra amiga agora?</h2>
-      <p>Nossa Inteligência Artificial está pronta para te ouvir. Desabafe e receba uma mensagem exclusiva e reconfortante para o seu momento atual.</p>
+      <h2>Amigo IA: Apoio Personalizado</h2>
+      <p>Conte como você está se sentindo agora. Nossa inteligência artificial preparou uma palavra de conforto e amparo exclusiva para o seu momento.</p>
       <a href="./ia/index.html" class="ai-btn">Conversar com o Amigo IA</a>
     </section>
 
     <main class="grid">
       <a class="card" href="./categorias/traicao/index.html">
         <h3>Traição</h3>
-        <p>Reflexões sobre deslealdade e como curar a quebra de confiança.</p>
+        <p>Reflexões sobre deslealdade e o caminho para curar a confiança ferida.</p>
       </a>
 
       <a class="card" href="./categorias/perda/index.html">
         <h3>Luto e Saudade</h3>
-        <p>Mensagens de conforto para a perda de entes queridos e frases de luto.</p>
+        <p>Palavras de amparo para a perda de entes queridos e superação da dor.</p>
       </a>
 
       <a class="card" href="./categorias/termino/index.html">
         <h3>Término</h3>
-        <p>Palavras para o término de namoro, casamento e o início do recomeço.</p>
+        <p>Conforto para o fim de namoro ou casamento e força para recomeçar.</p>
       </a>
 
       <a class="card" href="./categorias/magoa/index.html">
         <h3>Mágoa</h3>
-        <p>Expressando a dor e a decepção que as palavras nem sempre alcançam.</p>
+        <p>Para quando a decepção é profunda e as palavras custam a sair.</p>
       </a>
 
       <a class="card" href="./categorias/perdao/index.html">
         <h3>Perdão</h3>
-        <p>Encontre a mensagem de perdão ideal para libertar seu coração.</p>
-      </a>
-
-      <a class="card" href="./categorias/forcafe/index.html">
-        <h3>Força e Fé</h3>
-        <p>Mensagens de fé em Deus para atravessar os dias mais cinzentos.</p>
+        <p>Mensagens para encontrar a paz e libertar o coração através do perdão.</p>
       </a>
 
       <a class="card" href="./categorias/superacao/index.html">
         <h3>Superação</h3>
-        <p>Frases motivacionais de superação e lições para vencer na vida.</p>
+        <p>Frases de motivação e força para vencer os dias mais cinzentos.</p>
       </a>
     </main>
 
-    <article class="seo-content">
-      <h2>Apoio para Momentos de Dificuldade</h2>
+    <article class="seo-text">
+      <h2>O seu portal de mensagens de superação e conforto</h2>
       <p>
-        No <strong>Mensagem.net</strong>, acreditamos que nenhuma dor deve ser carregada sozinha. Seja enfrentando um <strong>término de namoro</strong>, a dor de uma <strong>traição</strong> ou o vazio do <strong>luto</strong>, nossa missão é oferecer um refúgio através das palavras. Além de nossa curadoria de <strong>mensagens de superação e motivação</strong>, inovamos ao trazer o <strong>Amigo IA</strong>, uma ferramenta que gera <strong>mensagens de conforto personalizadas</strong> baseadas no que você está sentindo agora. Encontre a paz necessária através de uma <strong>mensagem de perdão</strong> ou ganhe fôlego com nossas <strong>frases de superação de vida</strong>.
+        No <strong>Mensagem.net</strong>, entendemos que a vida apresenta desafios que, às vezes, parecem insuperáveis. Seja enfrentando um <strong>término de namoro</strong>, a dor profunda de um <strong>luto</strong> ou a decepção de uma <strong>traição</strong>, estamos aqui para oferecer suporte. Nosso diferencial é o <strong>Amigo IA</strong>, uma tecnologia dedicada a ouvir seus desabafos e criar uma <strong>mensagem de conforto personalizada</strong> para você. Unimos a tradição das <strong>frases de superação</strong> com o acolhimento da inteligência artificial para que você nunca se sinta sozinho em sua jornada de cura e recomeço.
       </p>
     </article>
 
+    <section class="contact-section">
+      <h2>Fale Conosco</h2>
+      <form name="contato-mensagem" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contato-mensagem" />
+        
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <textarea name="mensagem" rows="5" placeholder="Em que podemos ajudar você hoje?" required></textarea>
+        <button type="submit">Enviar Mensagem</button>
+      </form>
+    </section>
+
     <footer>
-      <p>© 2026 Mensagem.net — Seu portal de mensagens de superação e conforto.</p>
+      <p>© 2026 Mensagem.net — Seu portal de conforto e superação.</p>
     </footer>
   </div>
 </body>
